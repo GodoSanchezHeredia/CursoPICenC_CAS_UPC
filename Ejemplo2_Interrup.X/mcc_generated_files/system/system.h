@@ -1,13 +1,15 @@
- /*
- * MAIN Generated Driver File
+/**
+ * System Driver Header File
  * 
- * @file main.c
+ * @file system.h
  * 
- * @defgroup main MAIN
+ * @defgroup systemdriver System Driver
  * 
- * @brief This is the generated driver implementation file for the MAIN driver.
+ * @brief This file contains the API prototype for the System Driver.
  *
- * @version MAIN Driver Version 1.0.0
+ * @version Driver Version 2.0.3
+ *
+ * @version Package Version 5.3.4
 */
 
 /*
@@ -30,46 +32,28 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
+#ifndef SYSTEM_H
+#define	SYSTEM_H
+
+#include <xc.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include "../system/config_bits.h"
+#include "../system/clock.h"
+#include "../system/pins.h"
+#include "../system/interrupt.h"
+
+/**
+ * @ingroup systemdriver
+ * @brief Initializes the system module.
+ * This routine is called only once during system initialization, before calling other APIs.
+ * @param None.
+ * @return None.
 */
+void SYSTEM_Initialize(void);
 
-int main(void)
-{
-    SYSTEM_Initialize();
-
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global Interrupts 
-    // Use the following macros to: 
-
-    // Enable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptEnable(); 
-
-    // Disable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptDisable(); 
-
-
-    while(1)
-    {
-        /*
-        LED_SetHigh();
-        __delay_ms(500);
-        LED_SetLow();
-        __delay_ms(500);
-        */
-        
-        if (Boton_GetValue()== 1) {
- 
-            LED_SetLow();
-        }
-        else{
-        
-            LED_SetHigh();
-        }
-
-        
-        
-    }    
-}
+#endif	/* SYSTEM_H */
+/**
+ End of File
+*/

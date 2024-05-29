@@ -1,13 +1,15 @@
- /*
- * MAIN Generated Driver File
+/**
+ * Configuration Bits Generated Driver Header File
  * 
- * @file main.c
+ * @file config_bits.h
  * 
- * @defgroup main MAIN
+ * @defgroup config_bitsdriver CONFIGBITS Driver 
  * 
- * @brief This is the generated driver implementation file for the MAIN driver.
+ * @brief This file contains the API prototype for the Configuration Bits driver.
  *
- * @version MAIN Driver Version 1.0.0
+ * @version Driver Version 2.0.2
+ *
+ * @version Package Version 5.3.4
 */
 
 /*
@@ -30,46 +32,13 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
+#ifndef CONFIG_BITS_H
+#define	CONFIG_BITS_H
+
+#include "../system/clock.h"
+
+#endif	/* CONFIG_BITS_H */
+/**
+ End of File
 */
-
-int main(void)
-{
-    SYSTEM_Initialize();
-
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global Interrupts 
-    // Use the following macros to: 
-
-    // Enable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptEnable(); 
-
-    // Disable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptDisable(); 
-
-
-    while(1)
-    {
-        /*
-        LED_SetHigh();
-        __delay_ms(500);
-        LED_SetLow();
-        __delay_ms(500);
-        */
-        
-        if (Boton_GetValue()== 1) {
- 
-            LED_SetLow();
-        }
-        else{
-        
-            LED_SetHigh();
-        }
-
-        
-        
-    }    
-}

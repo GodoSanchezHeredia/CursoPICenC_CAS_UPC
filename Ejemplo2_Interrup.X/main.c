@@ -31,10 +31,13 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
-
+#include "stdbool.h"
 /*
     Main application
 */
+
+volatile bool Flag1=false,Flag2=false,Flag3=false;
+
 
 int main(void)
 {
@@ -44,32 +47,20 @@ int main(void)
     // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global Interrupts 
     // Use the following macros to: 
 
-    // Enable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptEnable(); 
+    // Enable the Global High Interrupts 
+    INTERRUPT_GlobalInterruptHighEnable(); 
 
-    // Disable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptDisable(); 
+    // Disable the Global High Interrupts 
+    //INTERRUPT_GlobalInterruptHighDisable(); 
+
+    // Enable the Global Low Interrupts 
+    INTERRUPT_GlobalInterruptLowEnable(); 
+
+    // Disable the Global Low Interrupts 
+    //INTERRUPT_GlobalInterruptLowDisable(); 
 
 
     while(1)
     {
-        /*
-        LED_SetHigh();
-        __delay_ms(500);
-        LED_SetLow();
-        __delay_ms(500);
-        */
-        
-        if (Boton_GetValue()== 1) {
- 
-            LED_SetLow();
-        }
-        else{
-        
-            LED_SetHigh();
-        }
-
-        
-        
     }    
 }

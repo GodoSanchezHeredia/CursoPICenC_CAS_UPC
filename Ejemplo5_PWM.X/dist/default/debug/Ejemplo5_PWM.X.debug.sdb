@@ -1,0 +1,712 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"56 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\main.c
+[e E17120 . `uc
+channel_VSS 59
+channel_Temp 60
+channel_DAC1 61
+channel_FVR_Buffer1 62
+channel_FVR_Buffer2 63
+channel_ANA0 0
+]
+"100 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/adc/src/adcc.c
+[e E17117 . `uc
+channel_VSS 59
+channel_Temp 60
+channel_DAC1 61
+channel_FVR_Buffer1 62
+channel_FVR_Buffer2 63
+channel_ANA0 0
+]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"39 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"45 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/adc/src/adcc.c
+[v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
+"100
+[v _ADCC_StartConversion ADCC_StartConversion `(v  1 e 1 0 ]
+"115
+[v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
+"143
+[v _ADCC_StopConversion ADCC_StopConversion `T(v  1 e 1 0 ]
+"50 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
+"137
+[v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+"179
+[v _PWM1_16BIT_Slice1Output1_SetInterruptHandler PWM1_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+"184
+[v _PWM1_16BIT_Slice1Output2_SetInterruptHandler PWM1_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+"189
+[v _PWM1_16BIT_Period_SetInterruptHandler PWM1_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+"194
+[v _PWM1_16BIT_Slice1Output1_DefaultInterruptHandler PWM1_16BIT_Slice1Output1_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Slice1Output1_DefaultInterruptHandler ]
+"200
+[v _PWM1_16BIT_Slice1Output2_DefaultInterruptHandler PWM1_16BIT_Slice1Output2_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Slice1Output2_DefaultInterruptHandler ]
+"206
+[v _PWM1_16BIT_Period_DefaultInterruptHandler PWM1_16BIT_Period_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Period_DefaultInterruptHandler ]
+"37 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"42 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"83
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+"92
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+"96
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"109
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+"118
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+"122
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"135
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+"144
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+"148
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"38 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"38 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"5140 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
+[v _ACTCON ACTCON `VEuc  1 e 1 @172 ]
+"5210
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+"5350
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @175 ]
+"5390
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
+"5448
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"5650
+[v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"10772
+[v _RF3PPS RF3PPS `VEuc  1 e 1 @556 ]
+"15474
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
+"15606
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @647 ]
+"15738
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
+"15870
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"36098
+[v _ADLTHL ADLTHL `VEuc  1 e 1 @985 ]
+"36226
+[v _ADLTHH ADLTHH `VEuc  1 e 1 @986 ]
+"36361
+[v _ADUTHL ADUTHL `VEuc  1 e 1 @987 ]
+"36489
+[v _ADUTHH ADUTHH `VEuc  1 e 1 @988 ]
+"36624
+[v _ADERRL ADERRL `VEuc  1 e 1 @989 ]
+"36752
+[v _ADERRH ADERRH `VEuc  1 e 1 @990 ]
+"36887
+[v _ADSTPTL ADSTPTL `VEuc  1 e 1 @991 ]
+"37015
+[v _ADSTPTH ADSTPTH `VEuc  1 e 1 @992 ]
+"37150
+[v _ADFLTRL ADFLTRL `VEuc  1 e 1 @993 ]
+"37278
+[v _ADFLTRH ADFLTRH `VEuc  1 e 1 @994 ]
+"37415
+[v _ADACCL ADACCL `VEuc  1 e 1 @995 ]
+"37543
+[v _ADACCH ADACCH `VEuc  1 e 1 @996 ]
+"37671
+[v _ADACCU ADACCU `VEuc  1 e 1 @997 ]
+"37799
+[v _ADCNT ADCNT `VEuc  1 e 1 @998 ]
+"37927
+[v _ADRPT ADRPT `VEuc  1 e 1 @999 ]
+"38062
+[v _ADPREVL ADPREVL `VEuc  1 e 1 @1000 ]
+"38190
+[v _ADPREVH ADPREVH `VEuc  1 e 1 @1001 ]
+"38325
+[v _ADRESL ADRESL `VEuc  1 e 1 @1002 ]
+"38453
+[v _ADRESH ADRESH `VEuc  1 e 1 @1003 ]
+"38573
+[v _ADPCH ADPCH `VEuc  1 e 1 @1004 ]
+"38638
+[v _ADACQL ADACQL `VEuc  1 e 1 @1006 ]
+"38766
+[v _ADACQH ADACQH `VEuc  1 e 1 @1007 ]
+"38858
+[v _ADCAP ADCAP `VEuc  1 e 1 @1008 ]
+"38917
+[v _ADPREL ADPREL `VEuc  1 e 1 @1009 ]
+"39045
+[v _ADPREH ADPREH `VEuc  1 e 1 @1010 ]
+"39137
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @1011 ]
+[s S581 . 1 `uc 1 GO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 FM 1 0 :2:2 
+`uc 1 CS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CONT 1 0 :1:6 
+`uc 1 ON 1 0 :1:7 
+]
+"39175
+[s S589 . 1 `uc 1 ADGO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM 1 0 :2:2 
+`uc 1 ADCS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADCONT 1 0 :1:6 
+`uc 1 ADON 1 0 :1:7 
+]
+"39175
+[s S597 . 1 `uc 1 DONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 FM0 1 0 :1:2 
+]
+"39175
+[s S601 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+]
+"39175
+[s S603 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM0 1 0 :1:2 
+]
+"39175
+[u S607 . 1 `S581 1 . 1 0 `S589 1 . 1 0 `S597 1 . 1 0 `S601 1 . 1 0 `S603 1 . 1 0 ]
+"39175
+"39175
+[v _ADCON0bits ADCON0bits `VES607  1 e 1 @1011 ]
+"39255
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @1012 ]
+[s S821 . 1 `uc 1 DSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 GPOL 1 0 :1:5 
+`uc 1 IPEN 1 0 :1:6 
+`uc 1 PPOL 1 0 :1:7 
+]
+"39276
+[s S827 . 1 `uc 1 ADDSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 ADGPOL 1 0 :1:5 
+`uc 1 ADIPEN 1 0 :1:6 
+`uc 1 ADPPOL 1 0 :1:7 
+]
+"39276
+[u S833 . 1 `S821 1 . 1 0 `S827 1 . 1 0 ]
+"39276
+"39276
+[v _ADCON1bits ADCON1bits `VES833  1 e 1 @1012 ]
+"39321
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @1013 ]
+[s S697 . 1 `uc 1 MD 1 0 :3:0 
+`uc 1 ACLR 1 0 :1:3 
+`uc 1 CRS 1 0 :3:4 
+`uc 1 PSIS 1 0 :1:7 
+]
+"39358
+[s S702 . 1 `uc 1 ADMD0 1 0 :1:0 
+`uc 1 ADMD1 1 0 :1:1 
+`uc 1 ADMD2 1 0 :1:2 
+`uc 1 ADACLR 1 0 :1:3 
+`uc 1 ADCRS0 1 0 :1:4 
+`uc 1 ADCRS1 1 0 :1:5 
+`uc 1 ADCRS2 1 0 :1:6 
+`uc 1 ADPSIS 1 0 :1:7 
+]
+"39358
+[s S711 . 1 `uc 1 ADMD 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCRS 1 0 :3:4 
+]
+"39358
+[s S715 . 1 `uc 1 MD0 1 0 :1:0 
+`uc 1 MD1 1 0 :1:1 
+`uc 1 MD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CRS0 1 0 :1:4 
+`uc 1 CRS1 1 0 :1:5 
+`uc 1 CRS2 1 0 :1:6 
+]
+"39358
+[u S723 . 1 `S697 1 . 1 0 `S702 1 . 1 0 `S711 1 . 1 0 `S715 1 . 1 0 ]
+"39358
+"39358
+[v _ADCON2bits ADCON2bits `VES723  1 e 1 @1013 ]
+"39463
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @1014 ]
+[s S642 . 1 `uc 1 TMD 1 0 :3:0 
+`uc 1 SOI 1 0 :1:3 
+`uc 1 CALC 1 0 :3:4 
+]
+"39498
+[s S646 . 1 `uc 1 ADTMD0 1 0 :1:0 
+`uc 1 ADTMD1 1 0 :1:1 
+`uc 1 ADTMD2 1 0 :1:2 
+`uc 1 ADSOI 1 0 :1:3 
+`uc 1 ADCALC0 1 0 :1:4 
+`uc 1 ADCALC1 1 0 :1:5 
+`uc 1 ADCALC2 1 0 :1:6 
+]
+"39498
+[s S654 . 1 `uc 1 ADTMD 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCALC 1 0 :3:4 
+]
+"39498
+[s S658 . 1 `uc 1 TMD0 1 0 :1:0 
+`uc 1 TMD1 1 0 :1:1 
+`uc 1 TMD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CALC0 1 0 :1:4 
+`uc 1 CALC1 1 0 :1:5 
+`uc 1 CALC2 1 0 :1:6 
+]
+"39498
+[u S666 . 1 `S642 1 . 1 0 `S646 1 . 1 0 `S654 1 . 1 0 `S658 1 . 1 0 ]
+"39498
+"39498
+[v _ADCON3bits ADCON3bits `VES666  1 e 1 @1014 ]
+"39593
+[v _ADSTAT ADSTAT `VEuc  1 e 1 @1015 ]
+[s S757 . 1 `uc 1 STAT 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 MATH 1 0 :1:4 
+`uc 1 LTHR 1 0 :1:5 
+`uc 1 UTHR 1 0 :1:6 
+`uc 1 AOV 1 0 :1:7 
+]
+"39630
+[s S764 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+`uc 1 ADSTAT1 1 0 :1:1 
+`uc 1 ADSTAT2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADMATH 1 0 :1:4 
+`uc 1 ADLTHR 1 0 :1:5 
+`uc 1 ADUTHR 1 0 :1:6 
+`uc 1 ADAOV 1 0 :1:7 
+]
+"39630
+[s S773 . 1 `uc 1 ADSTAT 1 0 :3:0 
+`uc 1 . 1 0 :4:3 
+`uc 1 ADOV 1 0 :1:7 
+]
+"39630
+[s S777 . 1 `uc 1 STAT0 1 0 :1:0 
+`uc 1 STAT1 1 0 :1:1 
+`uc 1 STAT2 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 OV 1 0 :1:7 
+]
+"39630
+[u S783 . 1 `S757 1 . 1 0 `S764 1 . 1 0 `S773 1 . 1 0 `S777 1 . 1 0 ]
+"39630
+"39630
+[v _ADSTATbits ADSTATbits `VES783  1 e 1 @1015 ]
+"39725
+[v _ADREF ADREF `VEuc  1 e 1 @1016 ]
+"39807
+[v _ADACT ADACT `VEuc  1 e 1 @1017 ]
+"39911
+[v _ADCLK ADCLK `VEuc  1 e 1 @1018 ]
+"40015
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"40077
+[v _WPUA WPUA `VEuc  1 e 1 @1025 ]
+"40139
+[v _ODCONA ODCONA `VEuc  1 e 1 @1026 ]
+"40201
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @1027 ]
+"40263
+[v _INLVLA INLVLA `VEuc  1 e 1 @1028 ]
+"40325
+[v _IOCAP IOCAP `VEuc  1 e 1 @1029 ]
+"40387
+[v _IOCAN IOCAN `VEuc  1 e 1 @1030 ]
+"40449
+[v _IOCAF IOCAF `VEuc  1 e 1 @1031 ]
+"40511
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"40573
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+"40635
+[v _ODCONB ODCONB `VEuc  1 e 1 @1034 ]
+"40697
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @1035 ]
+"40759
+[v _INLVLB INLVLB `VEuc  1 e 1 @1036 ]
+"40821
+[v _IOCBP IOCBP `VEuc  1 e 1 @1037 ]
+"40883
+[v _IOCBN IOCBN `VEuc  1 e 1 @1038 ]
+"40945
+[v _IOCBF IOCBF `VEuc  1 e 1 @1039 ]
+"41007
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"41069
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+"41131
+[v _ODCONC ODCONC `VEuc  1 e 1 @1042 ]
+"41193
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @1043 ]
+"41255
+[v _INLVLC INLVLC `VEuc  1 e 1 @1044 ]
+"41317
+[v _IOCCP IOCCP `VEuc  1 e 1 @1045 ]
+"41379
+[v _IOCCN IOCCN `VEuc  1 e 1 @1046 ]
+"41441
+[v _IOCCF IOCCF `VEuc  1 e 1 @1047 ]
+"41503
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"41565
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"41627
+[v _ODCOND ODCOND `VEuc  1 e 1 @1050 ]
+"41689
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @1051 ]
+"41751
+[v _INLVLD INLVLD `VEuc  1 e 1 @1052 ]
+"41813
+[v _ANSELE ANSELE `VEuc  1 e 1 @1056 ]
+"41845
+[v _WPUE WPUE `VEuc  1 e 1 @1057 ]
+"41883
+[v _ODCONE ODCONE `VEuc  1 e 1 @1058 ]
+"41915
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @1059 ]
+"41947
+[v _INLVLE INLVLE `VEuc  1 e 1 @1060 ]
+"41985
+[v _IOCEP IOCEP `VEuc  1 e 1 @1061 ]
+"42006
+[v _IOCEN IOCEN `VEuc  1 e 1 @1062 ]
+"42027
+[v _IOCEF IOCEF `VEuc  1 e 1 @1063 ]
+"42048
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"42110
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+"42172
+[v _ODCONF ODCONF `VEuc  1 e 1 @1066 ]
+"42234
+[v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
+"42296
+[v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+"45426
+[v _PWM1ERS PWM1ERS `VEuc  1 e 1 @1120 ]
+"45496
+[v _PWM1CLK PWM1CLK `VEuc  1 e 1 @1121 ]
+"45566
+[v _PWM1LDS PWM1LDS `VEuc  1 e 1 @1122 ]
+"45643
+[v _PWM1PRL PWM1PRL `VEuc  1 e 1 @1123 ]
+"45663
+[v _PWM1PRH PWM1PRH `VEuc  1 e 1 @1124 ]
+"45683
+[v _PWM1CPRE PWM1CPRE `VEuc  1 e 1 @1125 ]
+"45703
+[v _PWM1PIPOS PWM1PIPOS `VEuc  1 e 1 @1126 ]
+"45723
+[v _PWM1GIR PWM1GIR `VEuc  1 e 1 @1127 ]
+[s S60 . 1 `uc 1 S1P1IF 1 0 :1:0 
+`uc 1 S1P2IF 1 0 :1:1 
+]
+"45734
+[u S63 . 1 `S60 1 . 1 0 ]
+"45734
+"45734
+[v _PWM1GIRbits PWM1GIRbits `VES63  1 e 1 @1127 ]
+"45749
+[v _PWM1GIE PWM1GIE `VEuc  1 e 1 @1128 ]
+[s S134 . 1 `uc 1 S1P1IE 1 0 :1:0 
+`uc 1 S1P2IE 1 0 :1:1 
+]
+"45760
+[u S137 . 1 `S134 1 . 1 0 ]
+"45760
+"45760
+[v _PWM1GIEbits PWM1GIEbits `VES137  1 e 1 @1128 ]
+"45775
+[v _PWM1CON PWM1CON `VEuc  1 e 1 @1129 ]
+[s S119 . 1 `uc 1 ERSNOW 1 0 :1:0 
+`uc 1 ERSPOL 1 0 :1:1 
+`uc 1 LD 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"45789
+[u S125 . 1 `S119 1 . 1 0 ]
+"45789
+"45789
+[v _PWM1CONbits PWM1CONbits `VES125  1 e 1 @1129 ]
+"45814
+[v _PWM1S1CFG PWM1S1CFG `VEuc  1 e 1 @1130 ]
+"45880
+[v _PWM1S1P1L PWM1S1P1L `VEuc  1 e 1 @1131 ]
+"45900
+[v _PWM1S1P1H PWM1S1P1H `VEuc  1 e 1 @1132 ]
+"45927
+[v _PWM1S1P2L PWM1S1P2L `VEuc  1 e 1 @1133 ]
+"45947
+[v _PWM1S1P2H PWM1S1P2H `VEuc  1 e 1 @1134 ]
+[s S69 . 1 `uc 1 U1RXIE 1 0 :1:0 
+`uc 1 U1TXIE 1 0 :1:1 
+`uc 1 U1EIE 1 0 :1:2 
+`uc 1 U1IE 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 PWM1PIE 1 0 :1:6 
+`uc 1 PWM1IE 1 0 :1:7 
+]
+"47350
+[u S77 . 1 `S69 1 . 1 0 ]
+"47350
+"47350
+[v _PIE4bits PIE4bits `VES77  1 e 1 @1186 ]
+[s S332 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 ZCDIF 1 0 :1:1 
+`uc 1 ADIF 1 0 :1:2 
+`uc 1 ACTIF 1 0 :1:3 
+`uc 1 C1IF 1 0 :1:4 
+`uc 1 SMT1IF 1 0 :1:5 
+`uc 1 SMT1PRAIF 1 0 :1:6 
+`uc 1 SMT1PWAIF 1 0 :1:7 
+]
+"48056
+[u S341 . 1 `S332 1 . 1 0 ]
+"48056
+"48056
+[v _PIR1bits PIR1bits `VES341  1 e 1 @1199 ]
+[s S557 . 1 `uc 1 ADTIF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 DMA1SCNTIF 1 0 :1:4 
+`uc 1 DMA1DCNTIF 1 0 :1:5 
+`uc 1 DMA1ORIF 1 0 :1:6 
+`uc 1 DMA1AIF 1 0 :1:7 
+]
+"48116
+[u S564 . 1 `S557 1 . 1 0 ]
+"48116
+"48116
+[v _PIR2bits PIR2bits `VES564  1 e 1 @1200 ]
+[s S41 . 1 `uc 1 U1RXIF 1 0 :1:0 
+`uc 1 U1TXIF 1 0 :1:1 
+`uc 1 U1EIF 1 0 :1:2 
+`uc 1 U1IF 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 PWM1PIF 1 0 :1:6 
+`uc 1 PWM1IF 1 0 :1:7 
+]
+"48224
+[u S49 . 1 `S41 1 . 1 0 ]
+"48224
+"48224
+[v _PIR4bits PIR4bits `VES49  1 e 1 @1202 ]
+[s S363 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 CLC2IF 1 0 :1:1 
+`uc 1 CWG1IF 1 0 :1:2 
+`uc 1 NCO1IF 1 0 :1:3 
+`uc 1 DMA2SCNTIF 1 0 :1:4 
+`uc 1 DMA2DCNTIF 1 0 :1:5 
+`uc 1 DMA2ORIF 1 0 :1:6 
+`uc 1 DMA2AIF 1 0 :1:7 
+]
+"48333
+[u S372 . 1 `S363 1 . 1 0 ]
+"48333
+"48333
+[v _PIR6bits PIR6bits `VES372  1 e 1 @1204 ]
+[s S394 . 1 `uc 1 INT2IF 1 0 :1:0 
+`uc 1 CLC5IF 1 0 :1:1 
+`uc 1 CWG2IF 1 0 :1:2 
+`uc 1 NCO2IF 1 0 :1:3 
+`uc 1 DMA3SCNTIF 1 0 :1:4 
+`uc 1 DMA3DCNTIF 1 0 :1:5 
+`uc 1 DMA3ORIF 1 0 :1:6 
+`uc 1 DMA3AIF 1 0 :1:7 
+]
+"48559
+[u S403 . 1 `S394 1 . 1 0 ]
+"48559
+"48559
+[v _PIR10bits PIR10bits `VES403  1 e 1 @1208 ]
+"48861
+[v _LATA LATA `VEuc  1 e 1 @1214 ]
+"48923
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+"48985
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+"49047
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+"49109
+[v _LATE LATE `VEuc  1 e 1 @1218 ]
+"49141
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+"49203
+[v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"49265
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+"49327
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+"49389
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"49451
+[v _TRISE TRISE `VEuc  1 e 1 @1226 ]
+"49483
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+[s S306 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"49913
+[s S314 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"49913
+[u S317 . 1 `S306 1 . 1 0 `S314 1 . 1 0 ]
+"49913
+"49913
+[v _INTCON0bits INTCON0bits `VES317  1 e 1 @1238 ]
+"43 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_Slice1Output1_InterruptHandler PWM1_16BIT_Slice1Output1_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Slice1Output1_InterruptHandler ]
+"44
+[v _PWM1_16BIT_Slice1Output2_InterruptHandler PWM1_16BIT_Slice1Output2_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Slice1Output2_InterruptHandler ]
+"45
+[v _PWM1_16BIT_Period_InterruptHandler PWM1_16BIT_Period_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Period_InterruptHandler ]
+"38 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/system/src/interrupt.c
+[v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
+"39
+[v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
+"40
+[v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
+"39 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"53
+[v main@adc_value adc_value `us  1 a 2 6 ]
+"64
+} 0
+"38 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"45
+} 0
+"50 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
+{
+"119
+} 0
+"184
+[v _PWM1_16BIT_Slice1Output2_SetInterruptHandler PWM1_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"187
+} 0
+"179
+[v _PWM1_16BIT_Slice1Output1_SetInterruptHandler PWM1_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"182
+} 0
+"189
+[v _PWM1_16BIT_Period_SetInterruptHandler PWM1_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"192
+} 0
+"38 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"139
+} 0
+"42 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"71
+} 0
+"144
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"146
+} 0
+"118
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"120
+} 0
+"92
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"94
+} 0
+"37 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"53
+} 0
+"45 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/adc/src/adcc.c
+[v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
+{
+"98
+} 0
+"137 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_SetSlice1Output1DutyCycleRegister@registerValue registerValue `us  1 p 2 0 ]
+"141
+} 0
+"143 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo5_PWM.X\mcc_generated_files/adc/src/adcc.c
+[v _ADCC_StopConversion ADCC_StopConversion `T(v  1 e 1 0 ]
+{
+"147
+} 0
+"100
+[v _ADCC_StartConversion ADCC_StartConversion `(v  1 e 1 0 ]
+{
+[v ADCC_StartConversion@channel channel `E17117  1 a 1 wreg ]
+[v ADCC_StartConversion@channel channel `E17117  1 a 1 wreg ]
+"103
+[v ADCC_StartConversion@channel channel `E17117  1 a 1 0 ]
+"107
+} 0
+"115
+[v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
+{
+"119
+} 0

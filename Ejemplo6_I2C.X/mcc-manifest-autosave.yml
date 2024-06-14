@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: Ejemplo6_I2C
-creation_date: 2024-06-13T19:29:40.201-05:00[America/Bogota]
+creation_date: 2024-06-13T20:12:51.811-05:00[America/Bogota]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -26,3 +26,5 @@ modules:
 - {name: '@mchp-mcc/scf-pic8-i2c-v1', type: MELODY, version: 6.1.2}
 - {name: '@mchp-mcc/scf-pic8-interrupt-v1', type: MELODY, version: 5.2.10}
 - {name: '@mchp-mcc/scf-pic8-osc-v1', type: MELODY, version: 4.3.5}
+- {name: '@mchp-mcc/scf-pic8-uart-v1', type: MELODY, version: 7.1.1}
+- {name: '@mchp-mcc/uart-driver', type: MELODY, version: 1.10.0}

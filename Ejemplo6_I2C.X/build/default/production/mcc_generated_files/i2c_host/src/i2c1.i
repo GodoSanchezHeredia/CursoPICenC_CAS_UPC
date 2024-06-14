@@ -29546,17 +29546,19 @@ static void I2C1_Close(void);
 static void I2C1_DefaultCallback(void);
 
 
-static void I2C1_StartSend(void);
+
 static void I2C1_AddrTransmit(uint8_t addr);
-static void I2C1_DataTransmit(uint8_t data);
+
 static uint8_t I2C1_DataReceive(void);
 static void I2C1_CounterSet(uint8_t counter);
 static uint8_t I2C1_CounterGet(void);
 static __attribute__((inline)) void I2C1_BusReset(void);
 static __attribute__((inline)) void I2C1_RestartEnable(void);
 static __attribute__((inline)) void I2C1_RestartDisable(void);
-static void I2C1_StopSend(void);
-static _Bool I2C1_IsNack(void);
+ static void I2C1_StartSend(void);
+ static void I2C1_DataTransmit(uint8_t data);
+  static void I2C1_StopSend(void);
+  static _Bool I2C1_IsNack(void);
 static _Bool I2C1_IsBusCol(void);
 static _Bool I2C1_IsBusTimeOut(void);
 static _Bool I2C1_IsData(void);
@@ -29630,6 +29632,7 @@ void I2C1_Initialize(void)
     __nop();
     I2C1PIRbits.SCIF = 0;
     I2C1PIRbits.PCIF = 0;
+    I2C1PIEbits.SCIE = 1;
     I2C1PIEbits.PCIE = 1;
     I2C1_CallbackRegister(I2C1_DefaultCallback);
 }
@@ -29848,7 +29851,7 @@ static void I2C1_DefaultCallback(void)
 
 
 
-static void I2C1_StartSend(void)
+  static void I2C1_StartSend(void)
 {
     I2C1CON0bits.S = 1;
 }
@@ -29858,7 +29861,7 @@ static void I2C1_AddrTransmit(uint8_t addr)
     I2C1ADB1 = addr;
 }
 
-static void I2C1_DataTransmit(uint8_t data)
+ static void I2C1_DataTransmit(uint8_t data)
 {
     I2C1TXB = data;
 }
@@ -29914,7 +29917,7 @@ static __attribute__((inline)) void I2C1_RestartDisable(void)
     I2C1CON0bits.RSEN = 0;
 }
 
-static void I2C1_StopSend(void)
+ static void I2C1_StopSend(void)
 {
     I2C1_RestartDisable();
     if (I2C1_CounterGet())
@@ -29924,7 +29927,7 @@ static void I2C1_StopSend(void)
     }
 }
 
-static _Bool I2C1_IsNack(void)
+  static _Bool I2C1_IsNack(void)
 {
     return I2C1CON1bits.ACKSTAT;
 }

@@ -31,11 +31,13 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
-
+#include "stdbool.h"
+#include "mcc_generated_files/i2c_host/i2c_host_interface.h"
+#include "mcc_generated_files/i2c_host/i2c_host_types.h"
 /*
     Main application
 */
-
+const i2c_host_interface_t *I2C = &I2C1_Host;
 int main(void)
 {
     SYSTEM_Initialize();
@@ -49,16 +51,27 @@ int main(void)
 
     // Disable the Global Interrupts 
     //INTERRUPT_GlobalInterruptDisable(); 
+__delay_ms(3000);
+    printf("Scaner I2C \n\r");
+  uint8_t var= 0; 
+  bool respuesta= false;
+  
+   for (var = 0; var < 128; ++var) {
 
-    
+	    //I2C1_Write(uint16_t address, uint8_t *data, size_t dataLength)
+        I2C->Write(var,1,1);
+      
+	  if (respuesta == 0) {printf("-\n\r");}
+	  	  else if (respuesta == 1) {printf("0x%X\n\r",var);}
+__delay_ms(1);
+	  	  }
+printf("Scanner finalizado");
     while(1)
     {
         
-        uint8_t i;
-        for (i = 0; i < 10; i++) {
-            I2C1_Write(0x25,&i,1);
-            __delay_ms(1000);
-        }
+  
+
+ 
 
         
         

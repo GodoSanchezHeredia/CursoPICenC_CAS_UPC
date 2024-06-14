@@ -89,6 +89,46 @@
 #define IO_RC4_SetAnalogMode()      do { ANSELCbits.ANSELC4 = 1; } while(0)
 #define IO_RC4_SetDigitalMode()     do { ANSELCbits.ANSELC4 = 0; } while(0)
 
+// get/set RF0 aliases
+#define IO_RF0_TRIS                 TRISFbits.TRISF0
+#define IO_RF0_LAT                  LATFbits.LATF0
+#define IO_RF0_PORT                 PORTFbits.RF0
+#define IO_RF0_WPU                  WPUFbits.WPUF0
+#define IO_RF0_OD                   ODCONFbits.ODCF0
+#define IO_RF0_ANS                  ANSELFbits.ANSELF0
+#define IO_RF0_SetHigh()            do { LATFbits.LATF0 = 1; } while(0)
+#define IO_RF0_SetLow()             do { LATFbits.LATF0 = 0; } while(0)
+#define IO_RF0_Toggle()             do { LATFbits.LATF0 = ~LATFbits.LATF0; } while(0)
+#define IO_RF0_GetValue()           PORTFbits.RF0
+#define IO_RF0_SetDigitalInput()    do { TRISFbits.TRISF0 = 1; } while(0)
+#define IO_RF0_SetDigitalOutput()   do { TRISFbits.TRISF0 = 0; } while(0)
+#define IO_RF0_SetPullup()          do { WPUFbits.WPUF0 = 1; } while(0)
+#define IO_RF0_ResetPullup()        do { WPUFbits.WPUF0 = 0; } while(0)
+#define IO_RF0_SetPushPull()        do { ODCONFbits.ODCF0 = 0; } while(0)
+#define IO_RF0_SetOpenDrain()       do { ODCONFbits.ODCF0 = 1; } while(0)
+#define IO_RF0_SetAnalogMode()      do { ANSELFbits.ANSELF0 = 1; } while(0)
+#define IO_RF0_SetDigitalMode()     do { ANSELFbits.ANSELF0 = 0; } while(0)
+
+// get/set RF1 aliases
+#define IO_RF1_TRIS                 TRISFbits.TRISF1
+#define IO_RF1_LAT                  LATFbits.LATF1
+#define IO_RF1_PORT                 PORTFbits.RF1
+#define IO_RF1_WPU                  WPUFbits.WPUF1
+#define IO_RF1_OD                   ODCONFbits.ODCF1
+#define IO_RF1_ANS                  ANSELFbits.ANSELF1
+#define IO_RF1_SetHigh()            do { LATFbits.LATF1 = 1; } while(0)
+#define IO_RF1_SetLow()             do { LATFbits.LATF1 = 0; } while(0)
+#define IO_RF1_Toggle()             do { LATFbits.LATF1 = ~LATFbits.LATF1; } while(0)
+#define IO_RF1_GetValue()           PORTFbits.RF1
+#define IO_RF1_SetDigitalInput()    do { TRISFbits.TRISF1 = 1; } while(0)
+#define IO_RF1_SetDigitalOutput()   do { TRISFbits.TRISF1 = 0; } while(0)
+#define IO_RF1_SetPullup()          do { WPUFbits.WPUF1 = 1; } while(0)
+#define IO_RF1_ResetPullup()        do { WPUFbits.WPUF1 = 0; } while(0)
+#define IO_RF1_SetPushPull()        do { ODCONFbits.ODCF1 = 0; } while(0)
+#define IO_RF1_SetOpenDrain()       do { ODCONFbits.ODCF1 = 1; } while(0)
+#define IO_RF1_SetAnalogMode()      do { ANSELFbits.ANSELF1 = 1; } while(0)
+#define IO_RF1_SetDigitalMode()     do { ANSELFbits.ANSELF1 = 0; } while(0)
+
 /**
  * @ingroup  pinsdriver
  * @brief GPIO and peripheral I/O initialization

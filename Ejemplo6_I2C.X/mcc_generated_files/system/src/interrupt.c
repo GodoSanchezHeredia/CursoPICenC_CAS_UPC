@@ -70,37 +70,6 @@ void  INTERRUPT_Initialize (void)
 
 }
 
-/**
- * @ingroup interrupt
- * @brief Executes whenever a high-priority interrupt is triggered. This routine checks the source of the interrupt and calls the relevant interrupt function.
- * @pre INTERRUPT_Initialize() is already called.
- * @param None.
- * @return None.
- */
-void __interrupt() INTERRUPT_InterruptManager (void)
-{
-    // interrupt handler
-    if(PIE7bits.I2C1EIE == 1 && PIR7bits.I2C1EIF == 1)
-    {
-        I2C1_ERROR_ISR();
-    }
-    else if(PIE7bits.I2C1RXIE == 1 && PIR7bits.I2C1RXIF == 1)
-    {
-        I2C1_RX_ISR();
-    }
-    else if(PIE7bits.I2C1IE == 1 && PIR7bits.I2C1IF == 1)
-    {
-        I2C1_ISR();
-    }
-    else if(PIE7bits.I2C1TXIE == 1 && PIR7bits.I2C1TXIF == 1)
-    {
-        I2C1_TX_ISR();
-    }
-    else
-    {
-        //Unhandled Interrupt
-    }
-}
 
 void INT0_ISR(void)
 {

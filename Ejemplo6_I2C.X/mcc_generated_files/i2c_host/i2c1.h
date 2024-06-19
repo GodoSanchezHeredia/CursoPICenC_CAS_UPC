@@ -57,8 +57,15 @@
 #define I2C1_Host_CallbackRegister I2C1_CallbackRegister
 #define I2C1_Host_IsBusy I2C1_IsBusy
 
+#define I2C1_Host_Tasks I2C1_Tasks
 
 
+
+void I2C_Start(void);
+void I2C_Stop(void);
+void I2C_Restart(void);
+void I2C_Write_Addres_Data_Slave(uint8_t Address,uint8_t data_dir);
+void I2C_Write_Data_Slave(uint8_t data);
 /**
  Section: Data Type Definitions
  */
@@ -235,36 +242,11 @@ bool I2C1_IsBusy(void);
 void I2C1_CallbackRegister(void (*callbackHandler)(void));
 
 /**
- * @ingroup I2C1_host
- * @brief This function is ISR function for I2C1 Common interrupts
- * @param void
- * @return void
+ * @ingroup i2c_host
+ * @brief This is a polling function for the Non-Interrupt mode
+ * @param None.
+ * @return None.
  */
-void I2C1_ISR(void);
-
-/**
- * @ingroup I2C1_host
- * @brief This function is ISR function for I2C1 Error interrupts
- * @param void
- * @return void
- */
-void I2C1_ERROR_ISR(void);
-
-/**
- * @ingroup I2C1_host
- * @brief This function is ISR function for I2C1 Receive interrupts
- * @param void
- * @return void
- */
-void I2C1_RX_ISR(void);
-
-/**
- * @ingroup I2C1_host
- * @brief This function is ISR function for I2C1 Transmit interrupts
- * @param void
- * @return void
- */
-void I2C1_TX_ISR(void);
-
+void I2C1_Tasks(void);
  
 #endif //I2C1_H

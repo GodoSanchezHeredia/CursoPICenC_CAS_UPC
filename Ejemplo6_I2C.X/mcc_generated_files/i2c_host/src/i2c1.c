@@ -42,25 +42,21 @@ static void I2C1_Close(void);
 static void I2C1_DefaultCallback(void);
 
 /* I2C1 interfaces */
-
+static void I2C1_StartSend(void);
 static void I2C1_AddrTransmit(uint8_t addr);
-
+static void I2C1_DataTransmit(uint8_t data);
 static uint8_t I2C1_DataReceive(void);
 static void I2C1_CounterSet(uint8_t counter);
 static uint8_t I2C1_CounterGet(void);
 static inline void I2C1_BusReset(void);
 static inline void I2C1_RestartEnable(void);
 static inline void I2C1_RestartDisable(void);
- static void I2C1_StartSend(void);
- static   void I2C1_DataTransmit(uint8_t data);
-  static   void I2C1_StopSend(void);
-  static bool I2C1_IsNack(void);
+static void I2C1_StopSend(void);
+static bool I2C1_IsNack(void);
 static bool I2C1_IsBusCol(void);
 static bool I2C1_IsBusTimeOut(void);
 static bool I2C1_IsData(void);
 static bool I2C1_IsAddr(void);
-static inline void I2C1_InterruptsEnable(void);
-static inline void I2C1_InterruptsDisable(void);
 static inline void I2C1_InterruptsClear(void);
 static inline void I2C1_ErrorFlagsClear(void);
 static inline void I2C1_BufferClear(void);
@@ -78,7 +74,7 @@ const i2c_host_interface_t I2C1_Host = {
     .ErrorGet = I2C1_ErrorGet,
     .IsBusy = I2C1_IsBusy,
     .CallbackRegister = I2C1_CallbackRegister,
-    .Tasks = NULL
+    .Tasks = I2C1_Tasks
 };
 
 /**
@@ -108,16 +104,11 @@ void I2C1_Initialize(void)
     I2C1ERR = 0x0;
     /* Count register */
     I2C1CNT = 0x0;
-    /* Clock PadReg Configuration */
-    RC3I2C = 0x51;
     /* Data PadReg Configuration */
     RC4I2C = 0x51;
-    I2C1_InterruptsEnable();
 
     /* Silicon-Errata: Section: 1.3.2 */
     #warning "Refer to erratum DS80000870F: https://www.microchip.com/content/dam/mchp/documents/MCU08/ProductDocuments/Errata/PIC18F27-47-57Q43-Silicon-Errata-and-Datasheet-Clarifications-80000870J.pdf"
-    I2C1PIEbits.SCIE = 0;
-    I2C1PIEbits.PCIE = 0;
     I2C1CON0bits.EN = 1;
     __delay_us(1);
     __nop();
@@ -128,8 +119,6 @@ void I2C1_Initialize(void)
     __nop();
     I2C1PIRbits.SCIF = 0;
     I2C1PIRbits.PCIF = 0;
-    I2C1PIEbits.SCIE = 1;
-    I2C1PIEbits.PCIE = 1;
     I2C1_CallbackRegister(I2C1_DefaultCallback);
 }
 
@@ -143,7 +132,6 @@ void I2C1_Deinitialize(void)
     I2C1PIE = 0x00;
     I2C1ERR = 0x00;
     I2C1CNT = 0x00;
-    I2C1_InterruptsDisable();
     I2C1_CallbackRegister(I2C1_DefaultCallback);
 }
 
@@ -224,79 +212,85 @@ void I2C1_CallbackRegister(void (*callbackHandler)(void))
     }
 }
 
-void I2C1_ISR()
+void I2C1_Tasks(void)
 {
-    if (I2C1PIEbits.PCIE && I2C1PIRbits.PCIF)
+    if (I2C1ERRbits.NACKIF || I2C1ERRbits.BCLIF || I2C1ERRbits.BTOIF)
     {
-        I2C1_Close();
-    }
-    else if (I2C1PIEbits.CNTIE && I2C1PIRbits.CNTIF)
-    {
-        /*Check if restart is required*/
-        if (i2c1Status.switchToRead)
+        if (I2C1_IsBusCol())
         {
-            i2c1Status.switchToRead = false;
-            I2C1PIRbits.SCIF = 0;
-            I2C1PIRbits.CNTIF = 0;
-            I2C1_ReadStart();
+            i2c1Status.errorState = I2C_ERROR_BUS_COLLISION;
+            I2C1ERRbits.BCLIF = 0;
+            I2C1_BusReset();
         }
-        else 
+        else if (I2C1_IsAddr() && I2C1_IsNack())
         {
+            i2c1Status.errorState = I2C_ERROR_ADDR_NACK;
+            I2C1ERRbits.NACKIF = 0;
             I2C1_StopSend();
+        }
+        else if (I2C1_IsData() && I2C1_IsNack())
+        {
+            i2c1Status.errorState = I2C_ERROR_DATA_NACK;
+            I2C1ERRbits.NACKIF = 0;
+            I2C1_StopSend();
+        }
+        else if (I2C1_IsBusTimeOut())
+        {
+            i2c1Status.errorState = I2C_ERROR_BUS_COLLISION;
+            I2C1ERRbits.BTOIF = 0;
             I2C1_Close();
         }
-    }
-    else if (I2C1PIEbits.RSCIE && I2C1PIRbits.RSCIF)
-    {
-        I2C1_RestartDisable();
-        I2C1PIRbits.RSCIF = 0;
-    }
-}
+        else
+        {
+            I2C1ERRbits.NACKIF = 0;
+        }
 
-void I2C1_ERROR_ISR()
-{
-    if (I2C1_IsBusCol())
-    {
-        i2c1Status.errorState = I2C_ERROR_BUS_COLLISION;
-        I2C1ERRbits.BCLIF = 0;
-        I2C1_BusReset();
+        if (i2c1Status.errorState != I2C_ERROR_NONE)
+        {
+            I2C1_Callback();
+        }
     }
-    else if (I2C1_IsAddr() && I2C1_IsNack())
+    else if (I2C1PIRbits.PCIF || I2C1PIRbits.CNTIF || I2C1PIRbits.RSCIF)
     {
-        i2c1Status.errorState = I2C_ERROR_ADDR_NACK;
-        I2C1ERRbits.NACKIF = 0;
-        I2C1_StopSend();
-    }
-    else if (I2C1_IsData() && I2C1_IsNack())
-    {
-        i2c1Status.errorState = I2C_ERROR_DATA_NACK;
-        I2C1ERRbits.NACKIF = 0;
-        I2C1_StopSend();
-    }
-    else if (I2C1_IsBusTimeOut())
-    {
-        i2c1Status.errorState = I2C_ERROR_BUS_COLLISION;
-        I2C1ERRbits.BTOIF = 0;
-    }
-    else
-    {
-        I2C1ERRbits.NACKIF = 0;
-    }
+        if (PIR7bits.I2C1RXIF)
+        {
+            *i2c1Status.readPtr++ = I2C1_DataReceive();
+        }
 
-    if (i2c1Status.errorState != I2C_ERROR_NONE)
-    {
-        I2C1_Callback();
+        if (I2C1PIRbits.PCIF)
+        {
+            I2C1_Close();
+        }
+        else if (I2C1PIRbits.CNTIF)
+        {
+            /*Check if restart is required*/
+            if (i2c1Status.switchToRead)
+            {
+                i2c1Status.switchToRead = false;
+                I2C1PIRbits.SCIF = 0;
+                I2C1PIRbits.CNTIF = 0;
+                I2C1_ReadStart();
+            }
+            else 
+            {
+                I2C1_StopSend();
+                I2C1_Close();
+            }
+        }
+        else if (I2C1PIRbits.RSCIF)
+        {
+            I2C1_RestartDisable();
+            I2C1PIRbits.RSCIF = 0;
+        }
     }
-}
-
-void I2C1_RX_ISR()
-{
-    *i2c1Status.readPtr++ = I2C1_DataReceive();
-}
-
-void I2C1_TX_ISR()
-{
-    I2C1_DataTransmit(*i2c1Status.writePtr++);
+    else if (PIR7bits.I2C1RXIF)
+    {
+        *i2c1Status.readPtr++ = I2C1_DataReceive();
+    }
+    else if (PIR7bits.I2C1TXIF)
+    {
+        I2C1_DataTransmit(*i2c1Status.writePtr++);
+    }
 }
 
 /**
@@ -343,11 +337,31 @@ static void I2C1_DefaultCallback(void)
 {
     // Default Callback for Error Indication
 }
-
+void I2C_Start(void){
+    I2C1CON0bits.RSEN = 1;
+    //while(I2C1CON0bits.RSEN == 1);
+    I2C1CON0bits.S = 1;
+    //while(I2C1CON0bits.S == 1);
+}
+void I2C_Stop(void){
+    I2C1CON0bits.RSEN = 0;
+    I2C1_CounterSet(0);
+    //while(I2C1CON0bits.RSEN == 0);
+}
+void I2C_Restart(void){
+}
+void I2C_Write_Addres_Data_Slave(uint8_t Address,uint8_t data_dir){
+I2C1ADB1 = Address<<1;
+}
+void I2C_Write_Data_Slave(uint8_t data){
+    I2C1_CounterSet((uint8_t)1);
+     I2C1TXB = data;
+     while(I2C1STAT1bits.TXBE);
+}
 /**
  Section: Register Level Interfaces
  */
-  static void I2C1_StartSend(void)
+static void I2C1_StartSend(void)
 {
     I2C1CON0bits.S = 1;
 }
@@ -357,7 +371,7 @@ static void I2C1_AddrTransmit(uint8_t addr)
     I2C1ADB1 = addr;
 }
 
- static  void I2C1_DataTransmit(uint8_t data)
+static void I2C1_DataTransmit(uint8_t data)
 {
     I2C1TXB = data;
 }
@@ -381,15 +395,11 @@ static inline void I2C1_BusReset(void)
 {
     I2C1_InterruptsClear();
     I2C1_ErrorFlagsClear();
-    I2C1_InterruptsDisable();
     I2C1_BufferClear();
     I2C1CON0bits.EN = 0;
-    I2C1_InterruptsEnable();
 
     /* Silicon-Errata: Section: 1.3.2 */
     #warning "Refer to erratum DS80000870F: https://www.microchip.com/content/dam/mchp/documents/MCU08/ProductDocuments/Errata/PIC18F27-47-57Q43-Silicon-Errata-and-Datasheet-Clarifications-80000870J.pdf"
-    I2C1PIEbits.SCIE = 0;
-    I2C1PIEbits.PCIE = 0;
     I2C1CON0bits.EN = 1;
     __delay_us(1);
     __nop();
@@ -400,7 +410,6 @@ static inline void I2C1_BusReset(void)
     __nop();
     I2C1PIRbits.SCIF = 0;
     I2C1PIRbits.PCIF = 0;
-    I2C1PIEbits.PCIE = 1;
 }
 
 static inline void I2C1_RestartEnable(void)
@@ -413,7 +422,7 @@ static inline void I2C1_RestartDisable(void)
     I2C1CON0bits.RSEN = 0;
 }
 
- static  void I2C1_StopSend(void)
+static void I2C1_StopSend(void)
 {
     I2C1_RestartDisable();
     if (I2C1_CounterGet())
@@ -423,7 +432,7 @@ static inline void I2C1_RestartDisable(void)
     }
 }
 
-  static bool I2C1_IsNack(void)
+static bool I2C1_IsNack(void)
 {
     return I2C1CON1bits.ACKSTAT;
 }
@@ -446,29 +455,6 @@ static bool I2C1_IsData(void)
 static bool I2C1_IsAddr(void)
 {
     return !I2C1STAT0bits.D;
-}
-
-static inline void I2C1_InterruptsEnable(void)
-{
-    PIE7bits.I2C1IE = 1;
-    PIE7bits.I2C1EIE = 1;
-    PIE7bits.I2C1RXIE = 1;
-    PIE7bits.I2C1TXIE = 1;
-
-    I2C1PIEbits.PCIE = 1;
-    I2C1PIEbits.RSCIE = 1;
-    I2C1PIEbits.CNTIE = 1;
-    I2C1ERRbits.NACKIE = 1;
-}
-
-static inline void I2C1_InterruptsDisable(void)
-{
-    PIE7bits.I2C1IE = 0;
-    PIE7bits.I2C1EIE = 0;
-    PIE7bits.I2C1RXIE = 0;
-    PIE7bits.I2C1TXIE = 0;
-    I2C1PIE = 0x00;
-    I2C1ERR = 0x00;
 }
 
 static inline void I2C1_InterruptsClear(void)

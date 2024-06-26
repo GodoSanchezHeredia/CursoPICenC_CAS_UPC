@@ -146,9 +146,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14712
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 14712: extern volatile unsigned char I2C1SCLPPS __attribute__((address(0x271)));
 [v _I2C1SCLPPS `Vuc ~T0 @X0 0 e@625 ]
-"9820
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 9820: extern volatile unsigned char RC5PPS __attribute__((address(0x216)));
-[v _RC5PPS `Vuc ~T0 @X0 0 e@534 ]
+"9708
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 9708: extern volatile unsigned char RC3PPS __attribute__((address(0x214)));
+[v _RC3PPS `Vuc ~T0 @X0 0 e@532 ]
 "14646
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 14646: extern volatile unsigned char I2C1SDAPPS __attribute__((address(0x270)));
 [v _I2C1SDAPPS `Vuc ~T0 @X0 0 e@624 ]
@@ -2777,8 +2777,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 44:     LATB = 0x0;
 [e = _LATB -> -> 0 `i `uc ]
 "45
-[; ;mcc_generated_files/system/src/pins.c: 45:     LATC = 0x30;
-[e = _LATC -> -> 48 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 45:     LATC = 0x18;
+[e = _LATC -> -> 24 `i `uc ]
 "46
 [; ;mcc_generated_files/system/src/pins.c: 46:     LATD = 0x0;
 [e = _LATD -> -> 0 `i `uc ]
@@ -2795,8 +2795,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 54:     TRISB = 0xFF;
 [e = _TRISB -> -> 255 `i `uc ]
 "55
-[; ;mcc_generated_files/system/src/pins.c: 55:     TRISC = 0xCF;
-[e = _TRISC -> -> 207 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 55:     TRISC = 0xE7;
+[e = _TRISC -> -> 231 `i `uc ]
 "56
 [; ;mcc_generated_files/system/src/pins.c: 56:     TRISD = 0xFF;
 [e = _TRISD -> -> 255 `i `uc ]
@@ -2813,8 +2813,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 64:     ANSELB = 0xFF;
 [e = _ANSELB -> -> 255 `i `uc ]
 "65
-[; ;mcc_generated_files/system/src/pins.c: 65:     ANSELC = 0xCF;
-[e = _ANSELC -> -> 207 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 65:     ANSELC = 0xE7;
+[e = _ANSELC -> -> 231 `i `uc ]
 "66
 [; ;mcc_generated_files/system/src/pins.c: 66:     ANSELD = 0xFF;
 [e = _ANSELD -> -> 255 `i `uc ]
@@ -2849,8 +2849,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 84:     ODCONB = 0x0;
 [e = _ODCONB -> -> 0 `i `uc ]
 "85
-[; ;mcc_generated_files/system/src/pins.c: 85:     ODCONC = 0x30;
-[e = _ODCONC -> -> 48 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 85:     ODCONC = 0x18;
+[e = _ODCONC -> -> 24 `i `uc ]
 "86
 [; ;mcc_generated_files/system/src/pins.c: 86:     ODCOND = 0x0;
 [e = _ODCOND -> -> 0 `i `uc ]
@@ -2915,11 +2915,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 121:     RF0PPS = 0x20;
 [e = _RF0PPS -> -> 32 `i `uc ]
 "122
-[; ;mcc_generated_files/system/src/pins.c: 122:     I2C1SCLPPS = 0x15;
-[e = _I2C1SCLPPS -> -> 21 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 122:     I2C1SCLPPS = 0x13;
+[e = _I2C1SCLPPS -> -> 19 `i `uc ]
 "123
-[; ;mcc_generated_files/system/src/pins.c: 123:     RC5PPS = 0x37;
-[e = _RC5PPS -> -> 55 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 123:     RC3PPS = 0x37;
+[e = _RC3PPS -> -> 55 `i `uc ]
 "124
 [; ;mcc_generated_files/system/src/pins.c: 124:     I2C1SDAPPS = 0x14;
 [e = _I2C1SDAPPS -> -> 20 `i `uc ]

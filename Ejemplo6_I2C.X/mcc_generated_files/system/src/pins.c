@@ -42,7 +42,7 @@ void PIN_MANAGER_Initialize(void)
     */
     LATA = 0x0;
     LATB = 0x0;
-    LATC = 0x30;
+    LATC = 0x18;
     LATD = 0x0;
     LATE = 0x0;
     LATF = 0x0;
@@ -52,7 +52,7 @@ void PIN_MANAGER_Initialize(void)
     */
     TRISA = 0xFF;
     TRISB = 0xFF;
-    TRISC = 0xCF;
+    TRISC = 0xE7;
     TRISD = 0xFF;
     TRISE = 0xF;
     TRISF = 0xF6;
@@ -62,7 +62,7 @@ void PIN_MANAGER_Initialize(void)
     */
     ANSELA = 0xFF;
     ANSELB = 0xFF;
-    ANSELC = 0xCF;
+    ANSELC = 0xE7;
     ANSELD = 0xFF;
     ANSELE = 0x7;
     ANSELF = 0xF4;
@@ -82,7 +82,7 @@ void PIN_MANAGER_Initialize(void)
     */
     ODCONA = 0x0;
     ODCONB = 0x0;
-    ODCONC = 0x30;
+    ODCONC = 0x18;
     ODCOND = 0x0;
     ODCONE = 0x0;
     ODCONF = 0x0;
@@ -119,8 +119,8 @@ void PIN_MANAGER_Initialize(void)
     */
     U1RXPPS = 0x29; //RF1->UART1:RX1;
     RF0PPS = 0x20;  //RF0->UART1:TX1;
-    I2C1SCLPPS = 0x15;  //RC5->I2C1:SCL1;
-    RC5PPS = 0x37;  //RC5->I2C1:SCL1;
+    I2C1SCLPPS = 0x13;  //RC3->I2C1:SCL1;
+    RC3PPS = 0x37;  //RC3->I2C1:SCL1;
     I2C1SDAPPS = 0x14;  //RC4->I2C1:SDA1;
     RC4PPS = 0x38;  //RC4->I2C1:SDA1;
 

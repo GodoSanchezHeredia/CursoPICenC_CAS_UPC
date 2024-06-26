@@ -31,13 +31,17 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
-
+#include "I2C.h"
+#include "LCD.h"
 /*
     Main application
 */
 
+uint16_t i = 0;
+char str_i[6]= "";
 int main(void)
-{    SYSTEM_Initialize();
+{
+    SYSTEM_Initialize();
 
     // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
     // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global Interrupts 
@@ -49,17 +53,27 @@ int main(void)
     // Disable the Global Interrupts 
     //INTERRUPT_GlobalInterruptDisable(); 
 
-    uint8_t * dato = 0x05;
+    LCD_PIC_INIT();
+    LCD_PIC_SET_CURSOR(0,fila1);
+    LCD_PIC_PRINT_STRING("CLASE I2C");
+    
+
     while(1)
     {
         
-        printf("i2c example\n\r");
-        I2C_Start();
-        I2C_Write_Addres_Data_Slave(0X27,0);
-        I2C_Write_Data_Slave(0XF0);
-        I2C_Stop();
-        Led_Toggle();
-        __delay_ms(500);
+        for (i = 0; i < 1000; i++) {
+            
+            sprintf(str_i,"%04u",i);
+            
+            LCD_PIC_SET_CURSOR(0,fila2);
+            LCD_PIC_PRINT_STRING("Ctn:");
+            LCD_PIC_PRINT_STRING(str_i);
+            __delay_ms(500);
+            IO_RF3_Toggle();
+        }
+
+                
+        
         
     }    
 }

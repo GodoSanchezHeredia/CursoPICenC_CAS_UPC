@@ -847,6 +847,9 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
 # 12 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c" 2
+# 97 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+typedef signed int vfpf_sint_t;
+typedef unsigned int vfpf_uint_t;
 # 153 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
 static int prec, width;
 static char flags;
@@ -871,7 +874,15 @@ static char dbuf[32];
 static void pad(FILE *fp, char *buf, int p)
 {
     int i;
-# 205 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+
+
+
+    if (flags & (1 << 0)) {
+        fputs((const char *)buf, fp);
+    }
+
+
+
  if (p < 0) {
   p = 0;
  }
@@ -883,29 +894,143 @@ static void pad(FILE *fp, char *buf, int p)
 
 
 
-
+    if (!(flags & (1 << 0))) {
 
         fputs((const char *)buf, fp);
 
-
+    }
 
 
 
 
 
 }
-# 1176 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+# 1001 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+static void utoa(FILE *fp, vfpf_uint_t d)
+{
+    int i, w;
+
+
+
+ _Bool p = 1;
+# 1019 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+    w = width;
+
+
+    i = sizeof(dbuf) - 1;
+    dbuf[i] = '\0';
+    while (i && (d != 0
+
+
+
+    || p
+
+
+    || ((0 < w) && (flags & (1 << 1)))
+
+    )) {
+        --i;
+        dbuf[i] = '0' + (d % 10);
+
+
+
+  p = 0;
+
+        --w;
+        d = d / 10;
+    }
+
+
+    return (void) pad(fp, &dbuf[i], w);
+}
+# 1157 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+static int
+read_prec_or_width (const char **fmt, va_list *ap) {
+    int n = 0;
+    if ((*fmt)[0] == '*') {
+        ++*fmt;
+        n = (*(int *)__va_arg(*(int **)*ap, (int)0));
+    } else {
+        unsigned char c;
+        while ((c = ((unsigned)(*fmt)[0]) - '0') < 10) {
+            n = n * 10 + c;
+            ++*fmt;
+        }
+    }
+    return n;
+}
+
+
+
+
 static void
 vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
 {
     char c, *cp;
     _Bool done;
+
+ union {
+
+  vfpf_sint_t sint;
+  vfpf_uint_t uint;
+
+  long double f;
+ } convarg;
 # 1201 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
     if ((*fmt)[0] == '%') {
         ++*fmt;
 
         flags = width = 0;
         prec = -1;
+
+
+
+        done = 0;
+        while (!done) {
+            switch ((*fmt)[0]) {
+
+
+
+
+
+
+
+                case '0' :
+                    flags |= (1 << 1);
+                    ++*fmt;
+                    break;
+# 1242 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+                default:
+                    done = 1;
+                    break;
+            }
+        }
+# 1256 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+  width = read_prec_or_width(fmt, ap);
+  if (width < 0) {
+   flags |= (1 << 0);
+   width = -width;
+  }
+# 1291 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+  cp = *fmt;
+# 1439 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+  if (0
+# 1450 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+    || *cp == 'u'
+
+    ) {
+# 1495 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+   convarg.uint = (vfpf_uint_t)(unsigned int)(*(unsigned int *)__va_arg(*(unsigned int **)ap, (unsigned int)0));
+
+   *fmt = cp+1;
+   switch (*cp) {
+# 1523 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+    case 'u':
+# 1542 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+     return (void) utoa(fp, convarg.uint);
+# 1589 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
+   }
+  }
 # 1806 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
         ++*fmt;
         return (void) 0;

@@ -12,4 +12,6 @@ mcc_generated_files/system/../uart/uart1.h  \
 mcc_generated_files/system/../uart/../system/system.h  \
 mcc_generated_files/system/../uart/uart_drv_interface.h  \
 mcc_generated_files/system/../uart/uart_types.h  \
-mcc_generated_files/system/../system/interrupt.h 
+mcc_generated_files/system/../system/interrupt.h  \
+I2C.h  \
+LCD.h 

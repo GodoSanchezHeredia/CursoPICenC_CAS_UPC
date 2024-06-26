@@ -29504,29 +29504,23 @@ typedef struct
     void (*Tasks)(void);
 } i2c_host_interface_t;
 # 45 "./mcc_generated_files/system/../i2c_host/i2c1.h" 2
-# 64 "./mcc_generated_files/system/../i2c_host/i2c1.h"
-void I2C_Start(void);
-void I2C_Stop(void);
-void I2C_Restart(void);
-void I2C_Write_Addres_Data_Slave(uint8_t Address,uint8_t data_dir);
-void I2C_Write_Data_Slave(uint8_t data);
-# 77 "./mcc_generated_files/system/../i2c_host/i2c1.h"
+# 71 "./mcc_generated_files/system/../i2c_host/i2c1.h"
 extern const i2c_host_interface_t I2C1_Host;
-# 87 "./mcc_generated_files/system/../i2c_host/i2c1.h"
+# 81 "./mcc_generated_files/system/../i2c_host/i2c1.h"
 void I2C1_Initialize(void);
-# 96 "./mcc_generated_files/system/../i2c_host/i2c1.h"
+# 90 "./mcc_generated_files/system/../i2c_host/i2c1.h"
 void I2C1_Deinitialize(void);
-# 127 "./mcc_generated_files/system/../i2c_host/i2c1.h"
+# 121 "./mcc_generated_files/system/../i2c_host/i2c1.h"
 _Bool I2C1_Write(uint16_t address, uint8_t *data, size_t dataLength);
-# 158 "./mcc_generated_files/system/../i2c_host/i2c1.h"
+# 152 "./mcc_generated_files/system/../i2c_host/i2c1.h"
 _Bool I2C1_Read(uint16_t address, uint8_t *data, size_t dataLength);
-# 194 "./mcc_generated_files/system/../i2c_host/i2c1.h"
+# 188 "./mcc_generated_files/system/../i2c_host/i2c1.h"
 _Bool I2C1_WriteRead(uint16_t address, uint8_t *writeData, size_t writeLength, uint8_t *readData, size_t readLength);
-# 205 "./mcc_generated_files/system/../i2c_host/i2c1.h"
+# 199 "./mcc_generated_files/system/../i2c_host/i2c1.h"
 i2c_host_error_t I2C1_ErrorGet(void);
-# 215 "./mcc_generated_files/system/../i2c_host/i2c1.h"
+# 209 "./mcc_generated_files/system/../i2c_host/i2c1.h"
 _Bool I2C1_IsBusy(void);
-# 242 "./mcc_generated_files/system/../i2c_host/i2c1.h"
+# 236 "./mcc_generated_files/system/../i2c_host/i2c1.h"
 void I2C1_CallbackRegister(void (*callbackHandler)(void));
 
 
@@ -29771,25 +29765,69 @@ void INT2_DefaultInterruptHandler(void);
 void SYSTEM_Initialize(void);
 # 33 "main.c" 2
 
+# 1 "./I2C.h" 1
+# 19 "./I2C.h"
+uint8_t I2C_Read1Byte(uint8_t deviceAddress, uint8_t registerAddress, uint8_t *readData);
+uint8_t I2C_ReadNByte(uint8_t deviceAddress, uint8_t registerAddress, uint8_t *readData, size_t readLength);
+uint8_t I2C_Read(uint16_t deviceAddress, uint8_t *data, size_t dataLength);
+uint8_t I2C_Write(uint8_t deviceAddress, uint8_t *data, size_t writeLength);
+uint8_t I2C_Write1Byte(uint8_t deviceAddress, uint8_t data);
+_Bool I2C_AckPoll(uint8_t deviceAddress);
+# 34 "main.c" 2
+
+# 1 "./LCD.h" 1
+# 28 "./LCD.h"
+typedef enum{
+ fila1=0,
+ fila2,
+ fila3,
+ fila4
+}Ubicacion;
+
+
+void LCD_PIC_CMD(uint8_t a,uint8_t rs);
+void LCD_PIC_BUS(uint8_t a);
+void LCD_PIC_INIT(void);
+void LCD_PIC_SET_CURSOR(uint8_t x,Ubicacion y);
+void LCD_PIC_PRINT_CHAR(char a);
+void LCD_PIC_PRINT_STRING(char *a);
+void LCD_PIC_New_Char(uint8_t a,uint8_t b,uint8_t c,uint8_t d ,uint8_t e ,uint8_t f,uint8_t g,uint8_t h,uint8_t i);
+void LCD_PIC_Print_New_Char(uint8_t a);
+void LCD_PIC_Clear(void);
+void LCD_PIC_Home(void);
+# 35 "main.c" 2
 
 
 
 
 
+uint16_t i = 0;
+char str_i[6]= "";
 int main(void)
-{ SYSTEM_Initialize();
-# 52 "main.c"
-    uint8_t * dato = 0x05;
+{
+    SYSTEM_Initialize();
+# 56 "main.c"
+    LCD_PIC_INIT();
+    LCD_PIC_SET_CURSOR(0,fila1);
+    LCD_PIC_PRINT_STRING("CLASE I2C");
+
+
     while(1)
     {
 
-        printf("i2c example\n\r");
-        I2C_Start();
-        I2C_Write_Addres_Data_Slave(0X27,0);
-        I2C_Write_Data_Slave(0XF0);
-        I2C_Stop();
-        do { LATFbits.LATF3 = ~LATFbits.LATF3; } while(0);
-        _delay((unsigned long)((500)*(64000000/4000.0)));
+        for (i = 0; i < 1000; i++) {
+
+            sprintf(str_i,"%04u",i);
+
+            LCD_PIC_SET_CURSOR(0,fila2);
+            LCD_PIC_PRINT_STRING("Ctn:");
+            LCD_PIC_PRINT_STRING(str_i);
+            _delay((unsigned long)((500)*(64000000/4000.0)));
+            do { LATFbits.LATF3 = ~LATFbits.LATF3; } while(0);
+        }
+
+
+
 
     }
 }

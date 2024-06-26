@@ -1,0 +1,1171 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"67 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/i2c_host/src/i2c1.c
+[e E17437 . `uc
+I2C_ERROR_NONE 0
+I2C_ERROR_ADDR_NACK 1
+I2C_ERROR_DATA_NACK 2
+I2C_ERROR_BUS_COLLISION 3
+]
+"57 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\main.c
+[e E17753 . `uc
+SSD1306_COLOR_BLACK 0
+SSD1306_COLOR_WHITE 1
+]
+"6 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\I2C.C
+[e E17439 . `uc
+I2C_ERROR_NONE 0
+I2C_ERROR_ADDR_NACK 1
+I2C_ERROR_DATA_NACK 2
+I2C_ERROR_BUS_COLLISION 3
+]
+"152 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[e E379 . `uc
+SSD1306_COLOR_BLACK 0
+SSD1306_COLOR_WHITE 1
+]
+"24 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\test.c
+[e E17313 . `uc
+SSD1306_COLOR_BLACK 0
+SSD1306_COLOR_WHITE 1
+]
+"7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"106 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\I2C.C
+[v _I2C_Write I2C_Write `(uc  1 e 1 0 ]
+"147
+[v _I2C_AckPoll I2C_AckPoll `(a  1 e 1 0 ]
+"42 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"89 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/i2c_host/src/i2c1.c
+[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
+"127
+[v _I2C1_Deinitialize I2C1_Deinitialize `(v  1 e 1 0 ]
+"140
+[v _I2C1_Write I2C1_Write `(a  1 e 1 0 ]
+"159
+[v _I2C1_Read I2C1_Read `(a  1 e 1 0 ]
+"178
+[v _I2C1_WriteRead I2C1_WriteRead `(a  1 e 1 0 ]
+"197
+[v _I2C1_ErrorGet I2C1_ErrorGet `(E17437  1 e 1 0 ]
+"204
+[v _I2C1_IsBusy I2C1_IsBusy `(a  1 e 1 0 ]
+"209
+[v _I2C1_CallbackRegister I2C1_CallbackRegister `(v  1 e 1 0 ]
+"217
+[v _I2C1_Tasks I2C1_Tasks `(v  1 e 1 0 ]
+"301
+[v _I2C1_ReadStart I2C1_ReadStart `(v  1 s 1 I2C1_ReadStart ]
+"312
+[v _I2C1_WriteStart I2C1_WriteStart `(v  1 s 1 I2C1_WriteStart ]
+"327
+[v _I2C1_Close I2C1_Close `(v  1 s 1 I2C1_Close ]
+"338
+[v _I2C1_DefaultCallback I2C1_DefaultCallback `(v  1 s 1 I2C1_DefaultCallback ]
+"346
+[v _I2C1_StartSend I2C1_StartSend `(v  1 s 1 I2C1_StartSend ]
+"351
+[v _I2C1_AddrTransmit I2C1_AddrTransmit `(v  1 s 1 I2C1_AddrTransmit ]
+"356
+[v _I2C1_DataTransmit I2C1_DataTransmit `(v  1 s 1 I2C1_DataTransmit ]
+"361
+[v _I2C1_DataReceive I2C1_DataReceive `(uc  1 s 1 I2C1_DataReceive ]
+"366
+[v _I2C1_CounterSet I2C1_CounterSet `(v  1 s 1 I2C1_CounterSet ]
+"371
+[v _I2C1_CounterGet I2C1_CounterGet `(uc  1 s 1 I2C1_CounterGet ]
+"376
+[v _I2C1_BusReset I2C1_BusReset `T(v  1 s 1 I2C1_BusReset ]
+"397
+[v _I2C1_RestartEnable I2C1_RestartEnable `T(v  1 s 1 I2C1_RestartEnable ]
+"402
+[v _I2C1_RestartDisable I2C1_RestartDisable `T(v  1 s 1 I2C1_RestartDisable ]
+"407
+[v _I2C1_StopSend I2C1_StopSend `(v  1 s 1 I2C1_StopSend ]
+"417
+[v _I2C1_IsNack I2C1_IsNack `(a  1 s 1 I2C1_IsNack ]
+"422
+[v _I2C1_IsBusCol I2C1_IsBusCol `(a  1 s 1 I2C1_IsBusCol ]
+"427
+[v _I2C1_IsBusTimeOut I2C1_IsBusTimeOut `(a  1 s 1 I2C1_IsBusTimeOut ]
+"432
+[v _I2C1_IsData I2C1_IsData `(a  1 s 1 I2C1_IsData ]
+"437
+[v _I2C1_IsAddr I2C1_IsAddr `(a  1 s 1 I2C1_IsAddr ]
+"442
+[v _I2C1_InterruptsClear I2C1_InterruptsClear `T(v  1 s 1 I2C1_InterruptsClear ]
+"447
+[v _I2C1_ErrorFlagsClear I2C1_ErrorFlagsClear `T(v  1 s 1 I2C1_ErrorFlagsClear ]
+"454
+[v _I2C1_BufferClear I2C1_BufferClear `T(v  1 s 1 I2C1_BufferClear ]
+"37 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"42 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"83
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+"92
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+"96
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"109
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+"118
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+"122
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"135
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+"144
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+"148
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"38 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"38 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"60 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_ScrollRight SSD1306_ScrollRight `(v  1 e 1 0 ]
+"73
+[v _SSD1306_ScrollLeft SSD1306_ScrollLeft `(v  1 e 1 0 ]
+"118
+[v _SSD1306_Stopscroll SSD1306_Stopscroll `(v  1 e 1 0 ]
+"125
+[v _SSD1306_InvertDisplay SSD1306_InvertDisplay `(v  1 e 1 0 ]
+"164
+[v _SSD1306_Init SSD1306_Init `(uc  1 e 1 0 ]
+"231
+[v _SSD1306_UpdateScreen SSD1306_UpdateScreen `(v  1 e 1 0 ]
+"256
+[v _SSD1306_Fill SSD1306_Fill `(v  1 e 1 0 ]
+"261
+[v _SSD1306_DrawPixel SSD1306_DrawPixel `(v  1 e 1 0 ]
+"283
+[v _SSD1306_GotoXY SSD1306_GotoXY `(v  1 e 1 0 ]
+"289
+[v _SSD1306_Putc SSD1306_Putc `(uc  1 e 1 0 ]
+"320
+[v _SSD1306_Puts SSD1306_Puts `(uc  1 e 1 0 ]
+"338
+[v _SSD1306_DrawLine SSD1306_DrawLine `(v  1 e 1 0 ]
+"422
+[v _SSD1306_DrawRectangle SSD1306_DrawRectangle `(v  1 e 1 0 ]
+"447
+[v _SSD1306_DrawFilledRectangle SSD1306_DrawFilledRectangle `(v  1 e 1 0 ]
+"474
+[v _SSD1306_DrawTriangle SSD1306_DrawTriangle `(v  1 e 1 0 ]
+"538
+[v _SSD1306_DrawCircle SSD1306_DrawCircle `(v  1 e 1 0 ]
+"572
+[v _SSD1306_DrawFilledCircle SSD1306_DrawFilledCircle `(v  1 e 1 0 ]
+"605
+[v _SSD1306_Clear SSD1306_Clear `(v  1 e 1 0 ]
+"631
+[v _ssd1306_I2C_Init ssd1306_I2C_Init `(v  1 e 1 0 ]
+"643
+[v _ssd1306_I2C_WriteMulti ssd1306_I2C_WriteMulti `(v  1 e 1 0 ]
+"653
+[v _ssd1306_I2C_Write ssd1306_I2C_Write `(v  1 e 1 0 ]
+"14 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\test.c
+[v _TestLines TestLines `(v  1 e 1 0 ]
+"104
+[v _TestRectangles TestRectangles `(v  1 e 1 0 ]
+"121
+[v _TestFilledRectangles TestFilledRectangles `(v  1 e 1 0 ]
+"139
+[v _TestFilledCircles TestFilledCircles `(v  1 e 1 0 ]
+"156
+[v _TestCircles TestCircles `(v  1 e 1 0 ]
+"175
+[v _TestTriangles TestTriangles `(v  1 e 1 0 ]
+"5140 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
+[v _ACTCON ACTCON `VEuc  1 e 1 @172 ]
+"5210
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+"5350
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @175 ]
+"5390
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
+"5448
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"5650
+[v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"9708
+[v _RC3PPS RC3PPS `VEuc  1 e 1 @532 ]
+"9764
+[v _RC4PPS RC4PPS `VEuc  1 e 1 @533 ]
+"14646
+[v _I2C1SDAPPS I2C1SDAPPS `VEuc  1 e 1 @624 ]
+"14712
+[v _I2C1SCLPPS I2C1SCLPPS `VEuc  1 e 1 @625 ]
+"15474
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
+"15606
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @647 ]
+"15738
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
+"15870
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"16002
+[v _I2C1RXB I2C1RXB `VEuc  1 e 1 @651 ]
+"16022
+[v _I2C1TXB I2C1TXB `VEuc  1 e 1 @652 ]
+"16042
+[v _I2C1CNT I2C1CNT `VEuc  1 e 1 @653 ]
+"16132
+[v _I2C1ADB1 I2C1ADB1 `VEuc  1 e 1 @655 ]
+"16234
+[v _I2C1CON0 I2C1CON0 `VEuc  1 e 1 @660 ]
+[s S160 . 1 `uc 1 MODE 1 0 :3:0 
+`uc 1 MDR 1 0 :1:3 
+`uc 1 CSTR 1 0 :1:4 
+`uc 1 S 1 0 :1:5 
+`uc 1 RSEN 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"16256
+[s S167 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 I2CEN 1 0 :1:7 
+]
+[u S173 . 1 `S160 1 . 1 0 `S167 1 . 1 0 ]
+[v _I2C1CON0bits I2C1CON0bits `VES173  1 e 1 @660 ]
+"16311
+[v _I2C1CON1 I2C1CON1 `VEuc  1 e 1 @661 ]
+[s S440 . 1 `uc 1 CSD 1 0 :1:0 
+`uc 1 TXU 1 0 :1:1 
+`uc 1 RXO 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ACKT 1 0 :1:4 
+`uc 1 ACKSTAT 1 0 :1:5 
+`uc 1 ACKDT 1 0 :1:6 
+`uc 1 ACKCNT 1 0 :1:7 
+]
+"16328
+[u S449 . 1 `S440 1 . 1 0 ]
+[v _I2C1CON1bits I2C1CON1bits `VES449  1 e 1 @661 ]
+"16368
+[v _I2C1CON2 I2C1CON2 `VEuc  1 e 1 @662 ]
+"16444
+[v _I2C1ERR I2C1ERR `VEuc  1 e 1 @663 ]
+[s S299 . 1 `uc 1 NACKIE 1 0 :1:0 
+`uc 1 BCLIE 1 0 :1:1 
+`uc 1 BTOIE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 NACKIF 1 0 :1:4 
+`uc 1 BCLIF 1 0 :1:5 
+`uc 1 BTOIF 1 0 :1:6 
+]
+"16469
+[s S307 . 1 `uc 1 NACK1IE 1 0 :1:0 
+`uc 1 BCL1IE 1 0 :1:1 
+`uc 1 BTO1IE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 NACK1IF 1 0 :1:4 
+`uc 1 BCL1IF 1 0 :1:5 
+`uc 1 BTO1IF 1 0 :1:6 
+]
+[u S315 . 1 `S299 1 . 1 0 `S307 1 . 1 0 ]
+[v _I2C1ERRbits I2C1ERRbits `VES315  1 e 1 @663 ]
+[s S252 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 D 1 0 :1:3 
+`uc 1 R 1 0 :1:4 
+`uc 1 MMA 1 0 :1:5 
+`uc 1 SMA 1 0 :1:6 
+`uc 1 BFRE 1 0 :1:7 
+]
+"16564
+[s S259 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 DATA 1 0 :1:3 
+`uc 1 READ 1 0 :1:4 
+]
+[s S263 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_ADDRESS 1 0 :1:3 
+`uc 1 NOT_WRITE 1 0 :1:4 
+]
+[s S267 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_A 1 0 :1:3 
+`uc 1 NOT_W 1 0 :1:4 
+]
+[u S271 . 1 `S252 1 . 1 0 `S259 1 . 1 0 `S263 1 . 1 0 `S267 1 . 1 0 ]
+[v _I2C1STAT0bits I2C1STAT0bits `VES271  1 e 1 @664 ]
+"16624
+[v _I2C1STAT1 I2C1STAT1 `VEuc  1 e 1 @665 ]
+[s S462 . 1 `uc 1 RXBF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 CLRBF 1 0 :1:2 
+`uc 1 RXRE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 TXBE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 TXWE 1 0 :1:7 
+]
+"16641
+[u S471 . 1 `S462 1 . 1 0 ]
+[v _I2C1STAT1bits I2C1STAT1bits `VES471  1 e 1 @665 ]
+"16671
+[v _I2C1PIR I2C1PIR `VEuc  1 e 1 @666 ]
+[s S200 . 1 `uc 1 SCIF 1 0 :1:0 
+`uc 1 RSCIF 1 0 :1:1 
+`uc 1 PCIF 1 0 :1:2 
+`uc 1 ADRIF 1 0 :1:3 
+`uc 1 WRIF 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ACKTIF 1 0 :1:6 
+`uc 1 CNTIF 1 0 :1:7 
+]
+"16698
+[s S209 . 1 `uc 1 SC1IF 1 0 :1:0 
+`uc 1 RSC1IF 1 0 :1:1 
+`uc 1 PC1IF 1 0 :1:2 
+`uc 1 ADR1IF 1 0 :1:3 
+`uc 1 WR1IF 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ACKT1IF 1 0 :1:6 
+`uc 1 CNT1IF 1 0 :1:7 
+]
+[u S218 . 1 `S200 1 . 1 0 `S209 1 . 1 0 ]
+[v _I2C1PIRbits I2C1PIRbits `VES218  1 e 1 @666 ]
+"16773
+[v _I2C1PIE I2C1PIE `VEuc  1 e 1 @667 ]
+"16875
+[v _I2C1CLK I2C1CLK `VEuc  1 e 1 @668 ]
+"40015
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"40077
+[v _WPUA WPUA `VEuc  1 e 1 @1025 ]
+"40139
+[v _ODCONA ODCONA `VEuc  1 e 1 @1026 ]
+"40201
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @1027 ]
+"40263
+[v _INLVLA INLVLA `VEuc  1 e 1 @1028 ]
+"40325
+[v _IOCAP IOCAP `VEuc  1 e 1 @1029 ]
+"40387
+[v _IOCAN IOCAN `VEuc  1 e 1 @1030 ]
+"40449
+[v _IOCAF IOCAF `VEuc  1 e 1 @1031 ]
+"40511
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"40573
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+"40635
+[v _ODCONB ODCONB `VEuc  1 e 1 @1034 ]
+"40697
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @1035 ]
+"40759
+[v _INLVLB INLVLB `VEuc  1 e 1 @1036 ]
+"40821
+[v _IOCBP IOCBP `VEuc  1 e 1 @1037 ]
+"40883
+[v _IOCBN IOCBN `VEuc  1 e 1 @1038 ]
+"40945
+[v _IOCBF IOCBF `VEuc  1 e 1 @1039 ]
+"41007
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"41069
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+"41131
+[v _ODCONC ODCONC `VEuc  1 e 1 @1042 ]
+"41193
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @1043 ]
+"41255
+[v _INLVLC INLVLC `VEuc  1 e 1 @1044 ]
+"41317
+[v _IOCCP IOCCP `VEuc  1 e 1 @1045 ]
+"41379
+[v _IOCCN IOCCN `VEuc  1 e 1 @1046 ]
+"41441
+[v _IOCCF IOCCF `VEuc  1 e 1 @1047 ]
+"41503
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"41565
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"41627
+[v _ODCOND ODCOND `VEuc  1 e 1 @1050 ]
+"41689
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @1051 ]
+"41751
+[v _INLVLD INLVLD `VEuc  1 e 1 @1052 ]
+"41813
+[v _ANSELE ANSELE `VEuc  1 e 1 @1056 ]
+"41845
+[v _WPUE WPUE `VEuc  1 e 1 @1057 ]
+"41883
+[v _ODCONE ODCONE `VEuc  1 e 1 @1058 ]
+"41915
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @1059 ]
+"41947
+[v _INLVLE INLVLE `VEuc  1 e 1 @1060 ]
+"41985
+[v _IOCEP IOCEP `VEuc  1 e 1 @1061 ]
+"42006
+[v _IOCEN IOCEN `VEuc  1 e 1 @1062 ]
+"42027
+[v _IOCEF IOCEF `VEuc  1 e 1 @1063 ]
+"42048
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"42110
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+"42172
+[v _ODCONF ODCONF `VEuc  1 e 1 @1066 ]
+"42234
+[v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
+"42296
+[v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+[s S718 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 ZCDIF 1 0 :1:1 
+`uc 1 ADIF 1 0 :1:2 
+`uc 1 ACTIF 1 0 :1:3 
+`uc 1 C1IF 1 0 :1:4 
+`uc 1 SMT1IF 1 0 :1:5 
+`uc 1 SMT1PRAIF 1 0 :1:6 
+`uc 1 SMT1PWAIF 1 0 :1:7 
+]
+"48056
+[u S727 . 1 `S718 1 . 1 0 ]
+"48056
+"48056
+[v _PIR1bits PIR1bits `VES727  1 e 1 @1199 ]
+[s S749 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 CLC2IF 1 0 :1:1 
+`uc 1 CWG1IF 1 0 :1:2 
+`uc 1 NCO1IF 1 0 :1:3 
+`uc 1 DMA2SCNTIF 1 0 :1:4 
+`uc 1 DMA2DCNTIF 1 0 :1:5 
+`uc 1 DMA2ORIF 1 0 :1:6 
+`uc 1 DMA2AIF 1 0 :1:7 
+]
+"48333
+[u S758 . 1 `S749 1 . 1 0 ]
+"48333
+"48333
+[v _PIR6bits PIR6bits `VES758  1 e 1 @1204 ]
+[s S368 . 1 `uc 1 I2C1RXIF 1 0 :1:0 
+`uc 1 I2C1TXIF 1 0 :1:1 
+`uc 1 I2C1IF 1 0 :1:2 
+`uc 1 I2C1EIF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC3IF 1 0 :1:5 
+`uc 1 PWM3PIF 1 0 :1:6 
+`uc 1 PWM3IF 1 0 :1:7 
+]
+"48395
+[u S377 . 1 `S368 1 . 1 0 ]
+"48395
+"48395
+[v _PIR7bits PIR7bits `VES377  1 e 1 @1205 ]
+[s S780 . 1 `uc 1 INT2IF 1 0 :1:0 
+`uc 1 CLC5IF 1 0 :1:1 
+`uc 1 CWG2IF 1 0 :1:2 
+`uc 1 NCO2IF 1 0 :1:3 
+`uc 1 DMA3SCNTIF 1 0 :1:4 
+`uc 1 DMA3DCNTIF 1 0 :1:5 
+`uc 1 DMA3ORIF 1 0 :1:6 
+`uc 1 DMA3AIF 1 0 :1:7 
+]
+"48559
+[u S789 . 1 `S780 1 . 1 0 ]
+"48559
+"48559
+[v _PIR10bits PIR10bits `VES789  1 e 1 @1208 ]
+"48861
+[v _LATA LATA `VEuc  1 e 1 @1214 ]
+"48923
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+"48985
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+"49047
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+"49109
+[v _LATE LATE `VEuc  1 e 1 @1218 ]
+"49141
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+"49203
+[v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"49265
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+"49327
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+"49389
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"49451
+[v _TRISE TRISE `VEuc  1 e 1 @1226 ]
+"49483
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+[s S692 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"49913
+[s S700 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"49913
+[u S703 . 1 `S692 1 . 1 0 `S700 1 . 1 0 ]
+"49913
+"49913
+[v _INTCON0bits INTCON0bits `VES703  1 e 1 @1238 ]
+"21 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\fonts.c
+[v _Font7x10 Font7x10 `C[950]us  1 e 1900 0 ]
+"119
+[v _Font11x18 Font11x18 `C[1710]us  1 e 3420 0 ]
+"217
+[v _Font16x26 Font16x26 `C[2470]us  1 e 4940 0 ]
+[s S904 . 4 `uc 1 FontWidth 1 0 `uc 1 FontHeight 1 1 `*.32Cus 1 data 2 2 ]
+"322
+[v _Font_11x18 Font_11x18 `S904  1 e 4 0 ]
+"11 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\I2C.C
+[v _I2C_status I2C_status `uc  1 e 1 0 ]
+"12
+[v _I2C_get_error I2C_get_error `uc  1 e 1 0 ]
+[s S49 . 30 `*.38(v 1 Initialize 3 0 `*.38(v 1 Deinitialize 3 3 `*.38(a 1 Write 3 6 `*.38(a 1 Read 3 9 `*.38(a 1 WriteRead 3 12 `*.38(a 1 TransferSetup 3 15 `*.38(E17437 1 ErrorGet 3 18 `*.38(a 1 IsBusy 3 21 `*.38(v 1 CallbackRegister 3 24 `*.38(v 1 Tasks 3 27 ]
+"67 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/i2c_host/src/i2c1.c
+[v _I2C1_Host I2C1_Host `CS49  1 e 30 0 ]
+"83
+[v _I2C1_Callback I2C1_Callback `*.38(v  1 s 3 I2C1_Callback ]
+[s S141 . 13 `a 1 busy 1 0 `us 1 address 2 1 `*.39uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.39uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E17437 1 errorState 1 12 ]
+"84
+[v _i2c1Status i2c1Status `VES141  1 e 13 0 ]
+"38 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/system/src/interrupt.c
+[v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
+"39
+[v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
+"40
+[v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
+"34 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_Buffer SSD1306_Buffer `[1024]uc  1 s 1024 SSD1306_Buffer ]
+[s S1124 . 6 `us 1 CurrentX 2 0 `us 1 CurrentY 2 2 `uc 1 Inverted 1 4 `uc 1 Initialized 1 5 ]
+"45
+[v _SSD1306 SSD1306 `S1124  1 s 6 SSD1306 ]
+"42 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"88
+} 0
+"175 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\test.c
+[v _TestTriangles TestTriangles `(v  1 e 1 0 ]
+{
+[v TestTriangles@color color `uc  1 a 1 wreg ]
+"177
+[v TestTriangles@i i `uc  1 a 1 60 ]
+"178
+[v TestTriangles@cy cy `uc  1 a 1 59 ]
+"177
+[v TestTriangles@cx cx `uc  1 a 1 58 ]
+[v TestTriangles@n n `uc  1 a 1 57 ]
+"175
+[v TestTriangles@color color `uc  1 a 1 wreg ]
+"177
+[v TestTriangles@color color `uc  1 a 1 56 ]
+"190
+} 0
+"474 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_DrawTriangle SSD1306_DrawTriangle `(v  1 e 1 0 ]
+{
+[v SSD1306_DrawTriangle@x1 x1 `us  1 p 2 42 ]
+[v SSD1306_DrawTriangle@y1 y1 `us  1 p 2 44 ]
+[v SSD1306_DrawTriangle@x2 x2 `us  1 p 2 46 ]
+[v SSD1306_DrawTriangle@y2 y2 `us  1 p 2 48 ]
+[v SSD1306_DrawTriangle@x3 x3 `us  1 p 2 50 ]
+[v SSD1306_DrawTriangle@y3 y3 `us  1 p 2 52 ]
+[v SSD1306_DrawTriangle@color color `E379  1 p 1 54 ]
+"479
+} 0
+"104 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\test.c
+[v _TestRectangles TestRectangles `(v  1 e 1 0 ]
+{
+[v TestRectangles@color color `uc  1 a 1 wreg ]
+"106
+[v TestRectangles@i i `uc  1 a 1 57 ]
+[v TestRectangles@i2 i2 `uc  1 a 1 56 ]
+[v TestRectangles@n n `uc  1 a 1 55 ]
+"104
+[v TestRectangles@color color `uc  1 a 1 wreg ]
+"108
+[v TestRectangles@color color `uc  1 a 1 54 ]
+"119
+} 0
+"422 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_DrawRectangle SSD1306_DrawRectangle `(v  1 e 1 0 ]
+{
+[v SSD1306_DrawRectangle@x x `us  1 p 2 42 ]
+[v SSD1306_DrawRectangle@y y `us  1 p 2 44 ]
+[v SSD1306_DrawRectangle@w w `us  1 p 2 46 ]
+[v SSD1306_DrawRectangle@h h `us  1 p 2 48 ]
+[v SSD1306_DrawRectangle@c c `E379  1 p 1 50 ]
+"445
+} 0
+"14 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\test.c
+[v _TestLines TestLines `(v  1 e 1 0 ]
+{
+[v TestLines@color color `uc  1 a 1 wreg ]
+"16
+[v TestLines@y2 y2 `uc  1 a 1 47 ]
+[v TestLines@x2 x2 `uc  1 a 1 46 ]
+[v TestLines@y1 y1 `uc  1 a 1 45 ]
+[v TestLines@x1 x1 `uc  1 a 1 44 ]
+"14
+[v TestLines@color color `uc  1 a 1 wreg ]
+"18
+[v TestLines@color color `uc  1 a 1 43 ]
+"101
+} 0
+"121
+[v _TestFilledRectangles TestFilledRectangles `(v  1 e 1 0 ]
+{
+[v TestFilledRectangles@color color `uc  1 a 1 wreg ]
+"123
+[v TestFilledRectangles@i i `uc  1 a 1 59 ]
+[v TestFilledRectangles@i2 i2 `uc  1 a 1 58 ]
+"125
+[v TestFilledRectangles@cy cy `uc  1 a 1 57 ]
+"124
+[v TestFilledRectangles@cx cx `uc  1 a 1 56 ]
+"121
+[v TestFilledRectangles@color color `uc  1 a 1 wreg ]
+"124
+[v TestFilledRectangles@color color `uc  1 a 1 55 ]
+"137
+} 0
+"447 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_DrawFilledRectangle SSD1306_DrawFilledRectangle `(v  1 e 1 0 ]
+{
+"448
+[v SSD1306_DrawFilledRectangle@i i `uc  1 a 1 53 ]
+"447
+[v SSD1306_DrawFilledRectangle@x x `us  1 p 2 42 ]
+[v SSD1306_DrawFilledRectangle@y y `us  1 p 2 44 ]
+[v SSD1306_DrawFilledRectangle@w w `us  1 p 2 46 ]
+[v SSD1306_DrawFilledRectangle@h h `us  1 p 2 48 ]
+[v SSD1306_DrawFilledRectangle@c c `E379  1 p 1 50 ]
+"472
+} 0
+"139 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\test.c
+[v _TestFilledCircles TestFilledCircles `(v  1 e 1 0 ]
+{
+[v TestFilledCircles@radius radius `uc  1 a 1 wreg ]
+"141
+[v TestFilledCircles@y y `uc  1 a 1 68 ]
+[v TestFilledCircles@x x `uc  1 a 1 67 ]
+[v TestFilledCircles@r2 r2 `uc  1 a 1 66 ]
+[v TestFilledCircles@h h `uc  1 a 1 65 ]
+[v TestFilledCircles@w w `uc  1 a 1 64 ]
+"139
+[v TestFilledCircles@radius radius `uc  1 a 1 wreg ]
+[v TestFilledCircles@color color `us  1 p 2 61 ]
+"141
+[v TestFilledCircles@radius radius `uc  1 a 1 69 ]
+"154
+} 0
+"572 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_DrawFilledCircle SSD1306_DrawFilledCircle `(v  1 e 1 0 ]
+{
+"577
+[v SSD1306_DrawFilledCircle@y y `s  1 a 2 59 ]
+"576
+[v SSD1306_DrawFilledCircle@x x `s  1 a 2 57 ]
+"573
+[v SSD1306_DrawFilledCircle@f f `s  1 a 2 55 ]
+"575
+[v SSD1306_DrawFilledCircle@ddF_y ddF_y `s  1 a 2 53 ]
+"574
+[v SSD1306_DrawFilledCircle@ddF_x ddF_x `s  1 a 2 51 ]
+"572
+[v SSD1306_DrawFilledCircle@x0 x0 `s  1 p 2 42 ]
+[v SSD1306_DrawFilledCircle@y0 y0 `s  1 p 2 44 ]
+[v SSD1306_DrawFilledCircle@r r `s  1 p 2 46 ]
+[v SSD1306_DrawFilledCircle@c c `E379  1 p 1 48 ]
+"601
+} 0
+"338
+[v _SSD1306_DrawLine SSD1306_DrawLine `(v  1 e 1 0 ]
+{
+"339
+[v SSD1306_DrawLine@dy dy `s  1 a 2 40 ]
+[v SSD1306_DrawLine@dx dx `s  1 a 2 38 ]
+[v SSD1306_DrawLine@tmp tmp `s  1 a 2 36 ]
+[v SSD1306_DrawLine@i i `s  1 a 2 34 ]
+[v SSD1306_DrawLine@e2 e2 `s  1 a 2 32 ]
+[v SSD1306_DrawLine@err err `s  1 a 2 30 ]
+[v SSD1306_DrawLine@sy sy `s  1 a 2 26 ]
+[v SSD1306_DrawLine@sx sx `s  1 a 2 24 ]
+"338
+[v SSD1306_DrawLine@x0 x0 `us  1 p 2 12 ]
+[v SSD1306_DrawLine@y0 y0 `us  1 p 2 14 ]
+[v SSD1306_DrawLine@x1 x1 `us  1 p 2 16 ]
+[v SSD1306_DrawLine@y1 y1 `us  1 p 2 18 ]
+[v SSD1306_DrawLine@c c `E379  1 p 1 20 ]
+"420
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"41
+} 0
+"156 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\test.c
+[v _TestCircles TestCircles `(v  1 e 1 0 ]
+{
+[v TestCircles@radius radius `uc  1 a 1 wreg ]
+"160
+[v TestCircles@y y `uc  1 a 1 38 ]
+[v TestCircles@x x `uc  1 a 1 37 ]
+[v TestCircles@r2 r2 `uc  1 a 1 36 ]
+"162
+[v TestCircles@h h `uc  1 a 1 35 ]
+"161
+[v TestCircles@w w `uc  1 a 1 34 ]
+"156
+[v TestCircles@radius radius `uc  1 a 1 wreg ]
+[v TestCircles@color color `us  1 p 2 31 ]
+"158
+[v TestCircles@radius radius `uc  1 a 1 39 ]
+"173
+} 0
+"538 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_DrawCircle SSD1306_DrawCircle `(v  1 e 1 0 ]
+{
+"543
+[v SSD1306_DrawCircle@y y `s  1 a 2 29 ]
+"542
+[v SSD1306_DrawCircle@x x `s  1 a 2 27 ]
+"539
+[v SSD1306_DrawCircle@f f `s  1 a 2 25 ]
+"541
+[v SSD1306_DrawCircle@ddF_y ddF_y `s  1 a 2 23 ]
+"540
+[v SSD1306_DrawCircle@ddF_x ddF_x `s  1 a 2 21 ]
+"538
+[v SSD1306_DrawCircle@x0 x0 `s  1 p 2 12 ]
+[v SSD1306_DrawCircle@y0 y0 `s  1 p 2 14 ]
+[v SSD1306_DrawCircle@r r `s  1 p 2 16 ]
+[v SSD1306_DrawCircle@c c `E379  1 p 1 18 ]
+"570
+} 0
+"605
+[v _SSD1306_Clear SSD1306_Clear `(v  1 e 1 0 ]
+{
+"609
+} 0
+"38 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"44
+} 0
+"38 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"142
+} 0
+"42 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"71
+} 0
+"144
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"146
+} 0
+"118
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"120
+} 0
+"92
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"94
+} 0
+"89 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/i2c_host/src/i2c1.c
+[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
+{
+"125
+} 0
+"209
+[v _I2C1_CallbackRegister I2C1_CallbackRegister `(v  1 e 1 0 ]
+{
+[v I2C1_CallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 0 ]
+"215
+} 0
+"37 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"53
+} 0
+"118 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_Stopscroll SSD1306_Stopscroll `(v  1 e 1 0 ]
+{
+"121
+} 0
+"60
+[v _SSD1306_ScrollRight SSD1306_ScrollRight `(v  1 e 1 0 ]
+{
+[v SSD1306_ScrollRight@start_row start_row `uc  1 a 1 wreg ]
+[v SSD1306_ScrollRight@start_row start_row `uc  1 a 1 wreg ]
+[v SSD1306_ScrollRight@end_row end_row `uc  1 p 1 18 ]
+"62
+[v SSD1306_ScrollRight@start_row start_row `uc  1 a 1 19 ]
+"70
+} 0
+"73
+[v _SSD1306_ScrollLeft SSD1306_ScrollLeft `(v  1 e 1 0 ]
+{
+[v SSD1306_ScrollLeft@start_row start_row `uc  1 a 1 wreg ]
+[v SSD1306_ScrollLeft@start_row start_row `uc  1 a 1 wreg ]
+[v SSD1306_ScrollLeft@end_row end_row `uc  1 p 1 18 ]
+"75
+[v SSD1306_ScrollLeft@start_row start_row `uc  1 a 1 19 ]
+"83
+} 0
+"320
+[v _SSD1306_Puts SSD1306_Puts `(uc  1 e 1 0 ]
+{
+[v SSD1306_Puts@str str `*.32uc  1 p 2 35 ]
+[s S904 . 4 `uc 1 FontWidth 1 0 `uc 1 FontHeight 1 1 `*.32Cus 1 data 2 2 ]
+[v SSD1306_Puts@Font Font `*.39S904  1 p 2 37 ]
+[v SSD1306_Puts@color color `E379  1 p 1 39 ]
+"335
+} 0
+"289
+[v _SSD1306_Putc SSD1306_Putc `(uc  1 e 1 0 ]
+{
+[v SSD1306_Putc@ch ch `uc  1 a 1 wreg ]
+"290
+[v SSD1306_Putc@j j `ul  1 a 4 31 ]
+[v SSD1306_Putc@i i `ul  1 a 4 27 ]
+[v SSD1306_Putc@b b `ul  1 a 4 22 ]
+"289
+[v SSD1306_Putc@ch ch `uc  1 a 1 wreg ]
+[s S904 . 4 `uc 1 FontWidth 1 0 `uc 1 FontHeight 1 1 `*.32Cus 1 data 2 2 ]
+[v SSD1306_Putc@Font Font `*.39S904  1 p 2 12 ]
+[v SSD1306_Putc@color color `E379  1 p 1 14 ]
+"293
+[v SSD1306_Putc@ch ch `uc  1 a 1 26 ]
+"318
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"261 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_DrawPixel SSD1306_DrawPixel `(v  1 e 1 0 ]
+{
+[v SSD1306_DrawPixel@x x `us  1 p 2 0 ]
+[v SSD1306_DrawPixel@y y `us  1 p 2 2 ]
+[v SSD1306_DrawPixel@color color `E379  1 p 1 4 ]
+"281
+} 0
+"125
+[v _SSD1306_InvertDisplay SSD1306_InvertDisplay `(v  1 e 1 0 ]
+{
+[v SSD1306_InvertDisplay@i i `i  1 p 2 18 ]
+"131
+} 0
+"164
+[v _SSD1306_Init SSD1306_Init `(uc  1 e 1 0 ]
+{
+"177
+[v SSD1306_Init@p p `ul  1 a 4 25 ]
+"229
+} 0
+"631
+[v _ssd1306_I2C_Init ssd1306_I2C_Init `(v  1 e 1 0 ]
+{
+"633
+[v ssd1306_I2C_Init@p p `ul  1 a 4 0 ]
+"641
+} 0
+"231
+[v _SSD1306_UpdateScreen SSD1306_UpdateScreen `(v  1 e 1 0 ]
+{
+"232
+[v SSD1306_UpdateScreen@m m `uc  1 a 1 24 ]
+"242
+} 0
+"643
+[v _ssd1306_I2C_WriteMulti ssd1306_I2C_WriteMulti `(v  1 e 1 0 ]
+{
+[v ssd1306_I2C_WriteMulti@address address `uc  1 a 1 wreg ]
+"644
+[v ssd1306_I2C_WriteMulti@dt dt `[256]uc  1 a 256 0 ]
+"646
+[v ssd1306_I2C_WriteMulti@i i `uc  1 a 1 21 ]
+"643
+[v ssd1306_I2C_WriteMulti@address address `uc  1 a 1 wreg ]
+[v ssd1306_I2C_WriteMulti@reg reg `uc  1 p 1 13 ]
+[v ssd1306_I2C_WriteMulti@data data `*.39uc  1 p 2 14 ]
+[v ssd1306_I2C_WriteMulti@count count `us  1 p 2 16 ]
+"645
+[v ssd1306_I2C_WriteMulti@address address `uc  1 a 1 20 ]
+"650
+} 0
+"653
+[v _ssd1306_I2C_Write ssd1306_I2C_Write `(v  1 e 1 0 ]
+{
+[v ssd1306_I2C_Write@address address `uc  1 a 1 wreg ]
+"654
+[v ssd1306_I2C_Write@dt dt `[2]uc  1 a 2 16 ]
+"653
+[v ssd1306_I2C_Write@address address `uc  1 a 1 wreg ]
+[v ssd1306_I2C_Write@reg reg `uc  1 p 1 13 ]
+[v ssd1306_I2C_Write@data data `uc  1 p 1 14 ]
+"655
+[v ssd1306_I2C_Write@address address `uc  1 a 1 15 ]
+"658
+} 0
+"106 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\I2C.C
+[v _I2C_Write I2C_Write `(uc  1 e 1 0 ]
+{
+[v I2C_Write@deviceAddress deviceAddress `uc  1 a 1 wreg ]
+[v I2C_Write@deviceAddress deviceAddress `uc  1 a 1 wreg ]
+[v I2C_Write@data data `*.39uc  1 p 2 8 ]
+[v I2C_Write@writeLength writeLength `ui  1 p 2 10 ]
+"109
+[v I2C_Write@deviceAddress deviceAddress `uc  1 a 1 12 ]
+"125
+} 0
+"217 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/i2c_host/src/i2c1.c
+[v _I2C1_Tasks I2C1_Tasks `(v  1 e 1 0 ]
+{
+"296
+} 0
+"407
+[v _I2C1_StopSend I2C1_StopSend `(v  1 s 1 I2C1_StopSend ]
+{
+"415
+} 0
+"402
+[v _I2C1_RestartDisable I2C1_RestartDisable `T(v  1 s 1 I2C1_RestartDisable ]
+{
+"405
+} 0
+"356
+[v _I2C1_DataTransmit I2C1_DataTransmit `(v  1 s 1 I2C1_DataTransmit ]
+{
+[v I2C1_DataTransmit@data data `uc  1 a 1 wreg ]
+[v I2C1_DataTransmit@data data `uc  1 a 1 wreg ]
+"358
+[v I2C1_DataTransmit@data data `uc  1 a 1 0 ]
+"359
+} 0
+"371
+[v _I2C1_CounterGet I2C1_CounterGet `(uc  1 s 1 I2C1_CounterGet ]
+{
+"374
+} 0
+"301
+[v _I2C1_ReadStart I2C1_ReadStart `(v  1 s 1 I2C1_ReadStart ]
+{
+"310
+} 0
+"417
+[v _I2C1_IsNack I2C1_IsNack `(a  1 s 1 I2C1_IsNack ]
+{
+"420
+} 0
+"432
+[v _I2C1_IsData I2C1_IsData `(a  1 s 1 I2C1_IsData ]
+{
+"435
+} 0
+"427
+[v _I2C1_IsBusTimeOut I2C1_IsBusTimeOut `(a  1 s 1 I2C1_IsBusTimeOut ]
+{
+"430
+} 0
+"422
+[v _I2C1_IsBusCol I2C1_IsBusCol `(a  1 s 1 I2C1_IsBusCol ]
+{
+"425
+} 0
+"437
+[v _I2C1_IsAddr I2C1_IsAddr `(a  1 s 1 I2C1_IsAddr ]
+{
+"440
+} 0
+"338
+[v _I2C1_DefaultCallback I2C1_DefaultCallback `(v  1 s 1 I2C1_DefaultCallback ]
+{
+"341
+} 0
+"361
+[v _I2C1_DataReceive I2C1_DataReceive `(uc  1 s 1 I2C1_DataReceive ]
+{
+"364
+} 0
+"327
+[v _I2C1_Close I2C1_Close `(v  1 s 1 I2C1_Close ]
+{
+"336
+} 0
+"376
+[v _I2C1_BusReset I2C1_BusReset `T(v  1 s 1 I2C1_BusReset ]
+{
+"395
+} 0
+"442
+[v _I2C1_InterruptsClear I2C1_InterruptsClear `T(v  1 s 1 I2C1_InterruptsClear ]
+{
+"445
+} 0
+"447
+[v _I2C1_ErrorFlagsClear I2C1_ErrorFlagsClear `T(v  1 s 1 I2C1_ErrorFlagsClear ]
+{
+"452
+} 0
+"454
+[v _I2C1_BufferClear I2C1_BufferClear `T(v  1 s 1 I2C1_BufferClear ]
+{
+"458
+} 0
+"256 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_Fill SSD1306_Fill `(v  1 e 1 0 ]
+{
+[v SSD1306_Fill@color color `E379  1 a 1 wreg ]
+[v SSD1306_Fill@color color `E379  1 a 1 wreg ]
+"258
+[v SSD1306_Fill@color color `E379  1 a 1 8 ]
+"259
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"5
+[v memset@p p `*.39uc  1 a 2 6 ]
+"3
+[v memset@dest dest `*.39v  1 p 2 0 ]
+[v memset@c c `i  1 p 2 2 ]
+[v memset@n n `ui  1 p 2 4 ]
+"10
+} 0
+"147 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\I2C.C
+[v _I2C_AckPoll I2C_AckPoll `(a  1 e 1 0 ]
+{
+[v I2C_AckPoll@deviceAddress deviceAddress `uc  1 a 1 wreg ]
+[v I2C_AckPoll@deviceAddress deviceAddress `uc  1 a 1 wreg ]
+"149
+[v I2C_AckPoll@deviceAddress deviceAddress `uc  1 a 1 8 ]
+"156
+} 0
+"140 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\mcc_generated_files/i2c_host/src/i2c1.c
+[v _I2C1_Write I2C1_Write `(a  1 e 1 0 ]
+{
+"142
+[v I2C1_Write@retStatus retStatus `a  1 a 1 7 ]
+"140
+[v I2C1_Write@address address `us  1 p 2 1 ]
+[v I2C1_Write@data data `*.39uc  1 p 2 3 ]
+[v I2C1_Write@dataLength dataLength `ui  1 p 2 5 ]
+"157
+} 0
+"312
+[v _I2C1_WriteStart I2C1_WriteStart `(v  1 s 1 I2C1_WriteStart ]
+{
+"325
+} 0
+"346
+[v _I2C1_StartSend I2C1_StartSend `(v  1 s 1 I2C1_StartSend ]
+{
+"349
+} 0
+"397
+[v _I2C1_RestartEnable I2C1_RestartEnable `T(v  1 s 1 I2C1_RestartEnable ]
+{
+"400
+} 0
+"366
+[v _I2C1_CounterSet I2C1_CounterSet `(v  1 s 1 I2C1_CounterSet ]
+{
+[v I2C1_CounterSet@counter counter `uc  1 a 1 wreg ]
+[v I2C1_CounterSet@counter counter `uc  1 a 1 wreg ]
+"368
+[v I2C1_CounterSet@counter counter `uc  1 a 1 0 ]
+"369
+} 0
+"351
+[v _I2C1_AddrTransmit I2C1_AddrTransmit `(v  1 s 1 I2C1_AddrTransmit ]
+{
+[v I2C1_AddrTransmit@addr addr `uc  1 a 1 wreg ]
+[v I2C1_AddrTransmit@addr addr `uc  1 a 1 wreg ]
+"353
+[v I2C1_AddrTransmit@addr addr `uc  1 a 1 0 ]
+"354
+} 0
+"204
+[v _I2C1_IsBusy I2C1_IsBusy `(a  1 e 1 0 ]
+{
+"207
+} 0
+"197
+[v _I2C1_ErrorGet I2C1_ErrorGet `(E17437  1 e 1 0 ]
+{
+"199
+[v I2C1_ErrorGet@retErrorState retErrorState `E17437  1 a 1 0 ]
+"202
+} 0
+"283 C:\Users\DELL\Documents\GitHub\CursoPICenC_CAS_UPC\Ejemplo7_OLED.X\ssd1306.c
+[v _SSD1306_GotoXY SSD1306_GotoXY `(v  1 e 1 0 ]
+{
+[v SSD1306_GotoXY@x x `us  1 p 2 0 ]
+[v SSD1306_GotoXY@y y `us  1 p 2 2 ]
+"287
+} 0

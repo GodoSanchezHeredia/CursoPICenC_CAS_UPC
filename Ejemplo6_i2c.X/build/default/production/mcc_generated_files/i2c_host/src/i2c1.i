@@ -29486,29 +29486,23 @@ typedef struct
     void (*Tasks)(void);
 } i2c_host_interface_t;
 # 45 "mcc_generated_files/i2c_host/src/../i2c1.h" 2
-# 64 "mcc_generated_files/i2c_host/src/../i2c1.h"
-void I2C_Start(void);
-void I2C_Stop(void);
-void I2C_Restart(void);
-void I2C_Write_Addres_Data_Slave(uint8_t Address,uint8_t data_dir);
-void I2C_Write_Data_Slave(uint8_t data);
-# 77 "mcc_generated_files/i2c_host/src/../i2c1.h"
+# 71 "mcc_generated_files/i2c_host/src/../i2c1.h"
 extern const i2c_host_interface_t I2C1_Host;
-# 87 "mcc_generated_files/i2c_host/src/../i2c1.h"
+# 81 "mcc_generated_files/i2c_host/src/../i2c1.h"
 void I2C1_Initialize(void);
-# 96 "mcc_generated_files/i2c_host/src/../i2c1.h"
+# 90 "mcc_generated_files/i2c_host/src/../i2c1.h"
 void I2C1_Deinitialize(void);
-# 127 "mcc_generated_files/i2c_host/src/../i2c1.h"
+# 121 "mcc_generated_files/i2c_host/src/../i2c1.h"
 _Bool I2C1_Write(uint16_t address, uint8_t *data, size_t dataLength);
-# 158 "mcc_generated_files/i2c_host/src/../i2c1.h"
+# 152 "mcc_generated_files/i2c_host/src/../i2c1.h"
 _Bool I2C1_Read(uint16_t address, uint8_t *data, size_t dataLength);
-# 194 "mcc_generated_files/i2c_host/src/../i2c1.h"
+# 188 "mcc_generated_files/i2c_host/src/../i2c1.h"
 _Bool I2C1_WriteRead(uint16_t address, uint8_t *writeData, size_t writeLength, uint8_t *readData, size_t readLength);
-# 205 "mcc_generated_files/i2c_host/src/../i2c1.h"
+# 199 "mcc_generated_files/i2c_host/src/../i2c1.h"
 i2c_host_error_t I2C1_ErrorGet(void);
-# 215 "mcc_generated_files/i2c_host/src/../i2c1.h"
+# 209 "mcc_generated_files/i2c_host/src/../i2c1.h"
 _Bool I2C1_IsBusy(void);
-# 242 "mcc_generated_files/i2c_host/src/../i2c1.h"
+# 236 "mcc_generated_files/i2c_host/src/../i2c1.h"
 void I2C1_CallbackRegister(void (*callbackHandler)(void));
 
 
@@ -29590,6 +29584,8 @@ void I2C1_Initialize(void)
     I2C1ERR = 0x0;
 
     I2C1CNT = 0x0;
+
+    RC3I2C = 0x51;
 
     RC4I2C = 0x51;
 
@@ -29823,27 +29819,7 @@ static void I2C1_DefaultCallback(void)
 {
 
 }
-void I2C_Start(void){
-    I2C1CON0bits.RSEN = 1;
 
-    I2C1CON0bits.S = 1;
-
-}
-void I2C_Stop(void){
-    I2C1CON0bits.RSEN = 0;
-    I2C1_CounterSet(0);
-
-}
-void I2C_Restart(void){
-}
-void I2C_Write_Addres_Data_Slave(uint8_t Address,uint8_t data_dir){
-I2C1ADB1 = Address<<1;
-}
-void I2C_Write_Data_Slave(uint8_t data){
-    I2C1_CounterSet((uint8_t)1);
-     I2C1TXB = data;
-     while(I2C1STAT1bits.TXBE);
-}
 
 
 

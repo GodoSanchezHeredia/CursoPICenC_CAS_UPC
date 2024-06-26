@@ -61,7 +61,7 @@ const struct SPI_INTERFACE SPI1_Host = {
 
 //con0 == SPI1CON0, con1 == SPI1CON1, con2 == SPI1CON2, baud == SPI1BAUD, clksel == SPI1CLKSEL
 static const spi_configuration_t spi1_configuration[] = {   
-    { 0x2, 0x0, 0x0, 0x7, 0x0 },
+    { 0x2, 0x0, 0x0, 0xf, 0x0 },
     { 0x2, 0x40, 0x0, 0x0, 0x0 }
 };
 
@@ -95,7 +95,7 @@ bool SPI1_Open(uint8_t spiConfigIndex)
         SPI1CON2 = spi1_configuration[spiConfigIndex].con2 & ~(_SPI1CON2_SPI1RXR_MASK) & ~(_SPI1CON2_SPI1TXR_MASK);
         SPI1BAUD = spi1_configuration[spiConfigIndex].baud;        
         SPI1CLK = spi1_configuration[spiConfigIndex].clksel;        
-		TRISCbits.TRISC3 = 0;
+		TRISCbits.TRISC6 = 0;
         SPI1CON0bits.EN = 1U;
 		
 		returnValue = true;

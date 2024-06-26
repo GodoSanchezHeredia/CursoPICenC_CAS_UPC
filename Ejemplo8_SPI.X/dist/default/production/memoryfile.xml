@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\Ejemplo8_SPI.X.production.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>131072</length>
+      <used>10916</used>
+      <free>120156</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>8192</length>
+      <used>257</used>
+      <free>7935</free>
+    </memory>
+  </executable>
+</project>

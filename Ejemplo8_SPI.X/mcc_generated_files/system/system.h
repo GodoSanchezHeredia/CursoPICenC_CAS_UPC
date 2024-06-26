@@ -43,6 +43,7 @@
 #include "../system/clock.h"
 #include "../system/pins.h"
 #include "../spi/spi1.h"
+#include "../uart/uart1.h"
 #include "../system/interrupt.h"
 
 /**

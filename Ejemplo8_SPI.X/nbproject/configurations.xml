@@ -19,6 +19,11 @@
           <itemPath>mcc_generated_files/system/interrupt.h</itemPath>
           <itemPath>mcc_generated_files/system/config_bits.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="uart" displayName="uart" projectFiles="true">
+          <itemPath>mcc_generated_files/uart/uart1.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart_drv_interface.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
+        </logicalFolder>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -49,6 +54,11 @@
             <itemPath>mcc_generated_files/system/src/system.c</itemPath>
             <itemPath>mcc_generated_files/system/src/clock.c</itemPath>
             <itemPath>mcc_generated_files/system/src/interrupt.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="uart" displayName="uart" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/uart/src/uart1.c</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>

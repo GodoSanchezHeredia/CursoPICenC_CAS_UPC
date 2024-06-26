@@ -50,8 +50,26 @@ int main(void)
     // Disable the Global Interrupts 
     //INTERRUPT_GlobalInterruptDisable(); 
 
-
+    uint8_t buffer[2];
+    uint8_t tramH,tramL;
+    uint16_t Trama;
+    
+    
     while(1)
     {
+        CS_SetLow();
+        SPI1_Open(SPI1_DEFAULT);
+        SPI1_BufferRead(buffer,2);
+        SPI1_Close();
+        CS_SetHigh();
+        tramH = buffer[0];
+        tramL = buffer[1];
+        
+        Trama = ((tramH<<8)+tramL);
+        
+        float temp =  Trama * 0.250;
+        printf("TEMPERATURA : %0.2f\n\r",temp);
+        __delay_ms(500);
+        
     }    
 }

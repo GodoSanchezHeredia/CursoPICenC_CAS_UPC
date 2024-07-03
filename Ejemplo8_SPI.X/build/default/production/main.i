@@ -29804,14 +29804,14 @@ int main(void)
     while(1)
     {
         do { LATAbits.LATA3 = 0; } while(0);
-        SPI1_Open(SPI1_DEFAULT);
+        SPI1_Open(HOST_CONFIG);
         SPI1_BufferRead(buffer,2);
         SPI1_Close();
         do { LATAbits.LATA3 = 1; } while(0);
         tramH = buffer[0];
         tramL = buffer[1];
 
-        Trama = ((tramH<<8)+tramL);
+        Trama = ((tramH<<8)+tramL)>>3;
 
         float temp = Trama * 0.250;
         printf("TEMPERATURA : %0.2f\n\r",temp);

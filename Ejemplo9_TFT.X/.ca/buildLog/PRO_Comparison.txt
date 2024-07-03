@@ -1,0 +1,209 @@
+make -f nbproject/Makefile-PRO_Comparison.mk SUBPROJECTS= .clean-conf
+make[1]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+rm -f  -r .ca/build/PRO_Comparison/production
+rm -f  -r .ca/dist/PRO_Comparison/production
+make[1]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+[32mCLEAN SUCCESSFUL (total time: 276ms)[0m
+make -f nbproject/Makefile-PRO_Comparison.mk SUBPROJECTS= .build-conf
+make  -f nbproject/Makefile-PRO_Comparison.mk .ca/dist/PRO_Comparison/production/Ejemplo9_TFT.X.production.hex
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/mcc_generated_files/system/src/config_bits.p1 mcc_generated_files/system/src/config_bits.c 
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/mcc_generated_files/system/src/clock.p1 mcc_generated_files/system/src/clock.c 
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/ILI9341_GFX.p1 ILI9341_GFX.c 
+ILI9341_GFX.c:13:16: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        int x = radius-1;
+            ~   ~~~~~~^~
+ILI9341_GFX.c:17:15: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        int err = dx - (radius << 1);
+            ~~~   ~~~^~~~~~~~~~~~~~~
+ILI9341_GFX.c:17:12: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        int err = dx - (radius << 1);
+                  ^~ ~
+ILI9341_GFX.c:21:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X + x, Y + y, color);
+                                    ~ ^
+ILI9341_GFX.c:21:32: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X + x, Y + y, color);
+                                           ~ ^
+ILI9341_GFX.c:22:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X + y, Y + x, color);
+                                    ~ ^
+ILI9341_GFX.c:22:32: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X + y, Y + x, color);
+                                           ~ ^
+ILI9341_GFX.c:23:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X - y, Y + x, color);
+                                    ~ ^
+ILI9341_GFX.c:23:32: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X - y, Y + x, color);
+                                           ~ ^
+ILI9341_GFX.c:24:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X - x, Y + y, color);
+                                    ~ ^
+ILI9341_GFX.c:24:32: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X - x, Y + y, color);
+                                           ~ ^
+ILI9341_GFX.c:25:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X - x, Y - y, color);
+                                    ~ ^
+ILI9341_GFX.c:25:32: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X - x, Y - y, color);
+                                           ~ ^
+ILI9341_GFX.c:26:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X - y, Y - x, color);
+                                    ~ ^
+ILI9341_GFX.c:26:32: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X - y, Y - x, color);
+                                           ~ ^
+ILI9341_GFX.c:27:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X + y, Y - x, color);
+                                    ~ ^
+ILI9341_GFX.c:27:32: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X + y, Y - x, color);
+                                           ~ ^
+ILI9341_GFX.c:28:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X + x, Y - y, color);
+                                    ~ ^
+ILI9341_GFX.c:28:32: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ILI9341_DrawPixel(X + x, Y - y, color);
+                                           ~ ^
+ILI9341_GFX.c:41:28: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        err += (-radius << 1) + dx;
+                                              ~ ^~
+ILI9341_GFX.c:49:10: warning: implicit conversion changes signedness: 'uint16_t' (aka 'unsigned short') to 'int' [-Wsign-conversion]
+        int x = radius;
+            ~   ^~~~~~
+ILI9341_GFX.c:51:18: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        int xChange = 1 - (radius << 1);
+            ~~~~~~~   ~~^~~~~~~~~~~~~~~
+ILI9341_GFX.c:57:18: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+                for (int i = X - x; i <= X + x; i++)
+                         ~   ~~^~~
+ILI9341_GFX.c:57:20: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                for (int i = X - x; i <= X + x; i++)
+                               ~ ^
+ILI9341_GFX.c:57:32: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                for (int i = X - x; i <= X + x; i++)
+                                           ~ ^
+ILI9341_GFX.c:59:22: warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
+                        ILI9341_DrawPixel(i, Y + y,color);
+                        ~~~~~~~~~~~~~~~~~ ^
+ILI9341_GFX.c:59:29: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        ILI9341_DrawPixel(i, Y + y,color);
+                                               ~ ^
+ILI9341_GFX.c:60:22: warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
+                        ILI9341_DrawPixel(i, Y - y,color);
+                        ~~~~~~~~~~~~~~~~~ ^
+ILI9341_GFX.c:60:29: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        ILI9341_DrawPixel(i, Y - y,color);
+                                               ~ ^
+ILI9341_GFX.c:63:18: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+                for (int i = X - y; i <= X + y; i++)
+                         ~   ~~^~~
+ILI9341_GFX.c:63:20: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                for (int i = X - y; i <= X + y; i++)
+                               ~ ^
+ILI9341_GFX.c:63:32: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                for (int i = X - y; i <= X + y; i++)
+                                           ~ ^
+ILI9341_GFX.c:65:22: warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
+                        ILI9341_DrawPixel(i, Y + x,color);
+                        ~~~~~~~~~~~~~~~~~ ^
+ILI9341_GFX.c:65:29: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        ILI9341_DrawPixel(i, Y + x,color);
+                                               ~ ^
+ILI9341_GFX.c:66:22: warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
+                        ILI9341_DrawPixel(i, Y - x,color);
+                        ~~~~~~~~~~~~~~~~~ ^
+ILI9341_GFX.c:66:29: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        ILI9341_DrawPixel(i, Y - x,color);
+                                               ~ ^
+ILI9341_GFX.c:192:18: warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+                        uint8_t b = 1 << (j & 0x07);
+                                ~   ~~^~~~~~~~~~~~~
+ILI9341_GFX.c:195:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                ILI9341_DrawPixel(X+i, Y+j, color);
+                                                   ~^
+ILI9341_GFX.c:195:30: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                ILI9341_DrawPixel(X+i, Y+j, color);
+                                                        ~^
+ILI9341_GFX.c:253:46: warning: overflow in expression; result is 11264 with type 'int' [-Winteger-overflow]
+        for(uint32_t i = 0; i < ILI9341_SCREEN_WIDTH*ILI9341_SCREEN_HEIGHT*2/BURST_MAX_SIZE; i++)
+                                                    ^
+40 warnings generated.
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/mcc_generated_files/system/src/interrupt.p1 mcc_generated_files/system/src/interrupt.c 
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/mcc_generated_files/system/src/pins.p1 mcc_generated_files/system/src/pins.c 
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/mcc_generated_files/spi/src/spi1.p1 mcc_generated_files/spi/src/spi1.c 
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/main.p1 main.c 
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/mcc_generated_files/system/src/system.p1 mcc_generated_files/system/src/system.c 
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/fonts.p1 fonts.c 
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/ILI9341_STM32_Driver.p1 ILI9341_STM32_Driver.c 
+ILI9341_STM32_Driver.c:71:14: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+        buffer[1] = x1;
+                  ~ ^~
+ILI9341_STM32_Driver.c:73:14: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+        buffer[3] = x2;
+                  ~ ^~
+ILI9341_STM32_Driver.c:79:14: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+        buffer[1] = y1;
+                  ~ ^~
+ILI9341_STM32_Driver.c:81:14: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+        buffer[3] = y2;
+                  ~ ^~
+ILI9341_STM32_Driver.c:279:33: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+        uint8_t buffer[2] = {color>>8, color};
+                            ~          ^~~~~
+ILI9341_STM32_Driver.c:306:22: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+                BurstBuffer[j+1] = color;
+                                 ~ ^~~~~
+ILI9341_STM32_Driver.c:318:43: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned long') to 'size_t' (aka 'unsigned int') [-Wconversion]
+            SPI1_BufferWrite(BurstBuffer, BufferSize);
+            ~~~~~~~~~~~~~~~~              ^~~~~~~~~~
+ILI9341_STM32_Driver.c:323:36: warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned long') to 'size_t' (aka 'unsigned int') [-Wconversion]
+     SPI1_BufferWrite(BurstBuffer, RemainderFromBlock);
+     ~~~~~~~~~~~~~~~~              ^~~~~~~~~~~~~~~~~~
+ILI9341_STM32_Driver.c:338:30: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+        uint8_t bufferX[4] = {x>>8, x, (x+1)>>8, (x+1)};
+                             ~      ^
+ILI9341_STM32_Driver.c:338:45: warning: implicit conversion loses integer precision: 'unsigned int' to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+        uint8_t bufferX[4] = {x>>8, x, (x+1)>>8, (x+1)};
+                             ~                    ~^~
+ILI9341_STM32_Driver.c:339:30: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+        uint8_t bufferY[4] = {y>>8, y, (y+1)>>8, (y+1)};
+                             ~      ^
+ILI9341_STM32_Driver.c:339:45: warning: implicit conversion loses integer precision: 'unsigned int' to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+        uint8_t bufferY[4] = {y>>8, y, (y+1)>>8, (y+1)};
+                             ~                    ~^~
+ILI9341_STM32_Driver.c:340:34: warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+        uint8_t bufferC[2] = {color>>8, color};
+                             ~          ^~~~~
+13 warnings generated.
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+make[2]: Entering directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=18F57Q43 -Wl,-Map=.ca/dist/PRO_Comparison/production/Ejemplo9_TFT.X.production.map  -DXPRJ_PRO_Comparison=PRO_Comparison  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -mafrlcsj -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto      -Wl,--memorysummary,.ca/dist/PRO_Comparison/production/memoryfile.xml -o .ca/dist/PRO_Comparison/production/Ejemplo9_TFT.X.production.elf  .ca/build/PRO_Comparison/production/mcc_generated_files/system/src/system.p1 .ca/build/PRO_Comparison/production/mcc_generated_files/system/src/interrupt.p1 .ca/build/PRO_Comparison/production/mcc_generated_files/spi/src/spi1.p1 .ca/build/PRO_Comparison/production/mcc_generated_files/system/src/config_bits.p1 .ca/build/PRO_Comparison/production/main.p1 .ca/build/PRO_Comparison/production/mcc_generated_files/system/src/clock.p1 .ca/build/PRO_Comparison/production/mcc_generated_files/system/src/pins.p1 .ca/build/PRO_Comparison/production/ILI9341_GFX.p1 .ca/build/PRO_Comparison/production/ILI9341_STM32_Driver.p1 .ca/build/PRO_Comparison/production/fonts.p1     
+(908) exit status = 1
+ILI9341_STM32_Driver.c:301:: error: (1250) could not find space (350 bytes) for variable _BurstBuffer
+(908) exit status = 1
+make[2]: Leaving directory 'C:/Users/DELL/Documents/GitHub/CursoPICenC_CAS_UPC/Ejemplo9_TFT.X'
+[31mmake[2]: *** [nbproject/Makefile-PRO_Comparison.mk:278: .ca/dist/PRO_Comparison/production/Ejemplo9_TFT.X.production.hex] Error 1
+make[1]: *** [nbproject/Makefile-PRO_Comparison.mk:85: .build-conf] Error 2
+make: *** [nbproject/Makefile-impl.mk:39: .build-impl] Error 2[0m
+[31mBUILD FAILED (exit value 2, total time: 16s)[0m

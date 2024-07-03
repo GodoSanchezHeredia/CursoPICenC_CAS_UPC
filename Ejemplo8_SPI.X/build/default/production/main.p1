@@ -18,7 +18,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mcc_generated_files/system/../spi/spi1.h: 150: _Bool SPI1_Open(uint8_t spiConfigIndex);
 [v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
 "61 main.c
-[; ;main.c: 61:         SPI1_Open(SPI1_DEFAULT);
+[; ;main.c: 61:         SPI1_Open(HOST_CONFIG);
 [c E17162 0 1 .. ]
 [n E17162 . HOST_CONFIG SPI1_DEFAULT  ]
 "185 ./mcc_generated_files/system/../spi/spi1.h
@@ -2641,8 +2641,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2424 ]
 "61
-[; ;main.c: 61:         SPI1_Open(SPI1_DEFAULT);
-[e ( _SPI1_Open (1 -> . `E17162 1 `uc ]
+[; ;main.c: 61:         SPI1_Open(HOST_CONFIG);
+[e ( _SPI1_Open (1 -> . `E17162 0 `uc ]
 "62
 [; ;main.c: 62:         SPI1_BufferRead(buffer,2);
 [e ( _SPI1_BufferRead (2 , -> &U _buffer `*v -> -> 2 `i `ui ]
@@ -2663,8 +2663,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 66:         tramL = buffer[1];
 [e = _tramL *U + &U _buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
 "68
-[; ;main.c: 68:         Trama = ((tramH<<8)+tramL);
-[e = _Trama -> + << -> _tramH `i -> 8 `i -> _tramL `i `us ]
+[; ;main.c: 68:         Trama = ((tramH<<8)+tramL)>>3;
+[e = _Trama -> >> + << -> _tramH `i -> 8 `i -> _tramL `i -> 3 `i `us ]
 "70
 [; ;main.c: 70:         float temp = Trama * 0.250;
 [v _temp `f ~T0 @X0 1 a ]

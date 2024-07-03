@@ -44,9 +44,9 @@
 #include "mcc_generated_files/mcc.h"
 #include "PID.h"
 
-#define PID_KP 0.0031318
-#define PID_KI 0.23089
-#define PID_KD 1.062e-05
+#define PID_KP 0.018956
+#define PID_KI 0.47038
+#define PID_KD 0.00019099
 #define PID_TAU 0
 #define PID_LMAX 12.0
 #define PID_LMIN 0
